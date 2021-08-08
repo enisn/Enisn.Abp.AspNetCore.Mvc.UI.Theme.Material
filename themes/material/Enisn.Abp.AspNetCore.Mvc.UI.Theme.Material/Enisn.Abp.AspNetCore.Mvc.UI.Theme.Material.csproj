@@ -1,16 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
+    <LangVersion>latest</LangVersion>
     <TargetFramework>net5.0</TargetFramework>
+    <OutputType>Library</OutputType>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-    <AssemblyName>Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic</AssemblyName>
-    <PackageId>Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic</PackageId>
     <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <IsPackable>true</IsPackable>
-    <OutputType>Library</OutputType>
+    <Version>1.0.0</Version>
+    <Authors>enisn</Authors>
+    <Description>A Material design theme for ABP Framework.</Description>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/enisn/Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/enisn/Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
