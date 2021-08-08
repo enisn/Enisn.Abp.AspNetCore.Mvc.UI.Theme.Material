@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Validation</name>
+    </assembly>
+    <members>
+        <member name="T:Volo.Abp.Validation.DisableValidationAttribute">
+            <summary>
+            Can be added to a method to disable auto validation.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Validation.EnableValidationAttribute">
+            <summary>
+            Can be added to a method to enable auto validation if validation is disabled for it's class.
+            </summary>
+        </member>
+    </members>
+</doc>

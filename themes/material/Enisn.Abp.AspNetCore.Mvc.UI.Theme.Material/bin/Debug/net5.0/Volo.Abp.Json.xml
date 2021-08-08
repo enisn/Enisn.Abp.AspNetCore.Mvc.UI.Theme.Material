@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Json</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.Json.AbpJsonOptions.DefaultDateTimeFormat">
+            <summary>
+            Used to set default value for the DateTimeFormat.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Json.AbpJsonOptions.UseHybridSerializer">
+            <summary>
+            It will try to use System.Json.Text to handle JSON if it can otherwise use Newtonsoft.
+            Affects both AbpJsonModule and AbpAspNetCoreMvcModule.
+            See <see cref="T:Volo.Abp.Json.SystemTextJson.AbpSystemTextJsonUnsupportedTypeMatcher"/>
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Json.SystemTextJson.JsonConverters.ObjectToInferredTypesConverter">
+            <summary>
+            https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-converters-how-to#deserialize-inferred-types-to-object-properties
+            </summary>
+        </member>
+    </members>
+</doc>

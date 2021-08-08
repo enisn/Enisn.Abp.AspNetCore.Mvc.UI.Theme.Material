@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.AspNetCore.Mvc.UI</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.UI.AbpMvcUiOptions.LoginUrl">
+            <summary>
+            Default value: "/Account/Login".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.UI.AbpMvcUiOptions.LogoutUrl">
+            <summary>
+            Default value: "/Account/Logout".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.UI.Components.LayoutHook.LayoutHookInfo.ComponentType">
+            <summary>
+            ViewComponent type.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.UI.Components.LayoutHook.LayoutHookInfo.Layout">
+            <summary>
+            Specifies the layout name to apply this hook.
+            null indicates that this hook will be applied to all layouts.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.UI.Layout.BreadCrumb.ShowHome">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.UI.Layout.BreadCrumb.ShowCurrent">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+    </members>
+</doc>

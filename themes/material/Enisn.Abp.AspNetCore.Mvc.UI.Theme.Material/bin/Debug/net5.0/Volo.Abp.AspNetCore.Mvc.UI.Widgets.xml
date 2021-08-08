@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.AspNetCore.Mvc.UI.Widgets</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.UI.Widgets.WidgetDefinition.Name">
+            <summary>
+            Unique name of the widget.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.UI.Widgets.WidgetDefinition.DisplayName">
+            <summary>
+            Display name of the widget.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.UI.Widgets.WidgetDefinition.RequiresAuthentication">
+            <summary>
+            Set true to make this Widget available only for authenticated users.
+            This property is not considered if <see cref="P:Volo.Abp.AspNetCore.Mvc.UI.Widgets.WidgetDefinition.RequiredPolicies"/> is already set.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.AspNetCore.Mvc.UI.Widgets.WidgetDefinition.WithRequiresAuthentication(System.Boolean)">
+            <summary>
+            Set true to make this Widget available only for authenticated users.
+            This value is not considered if <see cref="P:Volo.Abp.AspNetCore.Mvc.UI.Widgets.WidgetDefinition.RequiredPolicies"/> is already set.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Minify</name>
+    </assembly>
+    <members>
+        <member name="M:Volo.Abp.Minify.NUglify.NUglifyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor for serializing.
+            </summary>
+        </member>
+    </members>
+</doc>

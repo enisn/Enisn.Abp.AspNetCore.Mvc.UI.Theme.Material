@@ -1,0 +1,35 @@
+﻿@using System.Linq
+@using Microsoft.AspNetCore.Http.Extensions
+@model Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material.Themes.Material.Components.Toolbar.LanguageSwitch.LanguageSwitchViewComponentModel
+@if (Model.OtherLanguages.Any())
+{
+    <li class="nav-item dropdown">
+        <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            @if (Model.CurrentLanguage.FlagIcon.IsNullOrEmpty())
+            {
+                <span>@Model.CurrentLanguage.DisplayName</span>
+            }
+            else
+            {
+                <i class="m-0 flag @Model.CurrentLanguage.FlagIcon"></i>
+            }
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" data-mdb-popper="none">
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="flag @Model.CurrentLanguage.FlagIcon"></i>@Model.CurrentLanguage.DisplayName
+                    <i class="fa fa-check text-success ms-2"></i>
+                </a>
+            </li>
+
+            @foreach (var language in Model.OtherLanguages)
+            {
+                <li>
+                    <a class="dropdown-item" href="~/Abp/Languages/Switch?culture=@(language.CultureName)&uiCulture=@(language.UiCultureName)&returnUrl=@(System.Net.WebUtility.UrlEncode(Context.Request.GetEncodedPathAndQuery()))">
+                        <i class="flag @language.FlagIcon"></i>@language.DisplayName
+                    </a>
+                </li>
+            }
+        </ul>
+    </li>
+}

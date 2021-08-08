@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Security</name>
+    </assembly>
+    <members>
+        <member name="T:Volo.Abp.Authorization.AbpAuthorizationException">
+            <summary>
+            This exception is thrown on an unauthorized request.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.AbpAuthorizationException.LogLevel">
+            <summary>
+            Severity of the exception.
+            Default: Warn.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.AbpAuthorizationException.Code">
+            <summary>
+            Error code.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Authorization.AbpAuthorizationException.#ctor">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Authorization.AbpAuthorizationException"/> object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Authorization.AbpAuthorizationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Authorization.AbpAuthorizationException"/> object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Authorization.AbpAuthorizationException.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Authorization.AbpAuthorizationException"/> object.
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="M:Volo.Abp.Authorization.AbpAuthorizationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Authorization.AbpAuthorizationException"/> object.
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="innerException">Inner exception</param>
+        </member>
+        <member name="M:Volo.Abp.Authorization.AbpAuthorizationException.#ctor(System.String,System.String,System.Exception)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Authorization.AbpAuthorizationException"/> object.
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="code">Exception code</param>
+            <param name="innerException">Inner exception</param>
+        </member>
+        <member name="T:Volo.Abp.Security.Claims.AbpClaimTypes">
+            <summary>
+            Used to get ABP-specific claim type names.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.UserName">
+            <summary>
+            Default: <see cref="F:System.Security.Claims.ClaimTypes.Name"/>
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.Name">
+            <summary>
+            Default: <see cref="F:System.Security.Claims.ClaimTypes.GivenName"/>
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.SurName">
+            <summary>
+            Default: <see cref="F:System.Security.Claims.ClaimTypes.Surname"/>
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.UserId">
+            <summary>
+            Default: <see cref="F:System.Security.Claims.ClaimTypes.NameIdentifier"/>
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.Role">
+            <summary>
+            Default: <see cref="F:System.Security.Claims.ClaimTypes.Role"/>
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.Email">
+            <summary>
+            Default: <see cref="F:System.Security.Claims.ClaimTypes.Email"/>
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.EmailVerified">
+            <summary>
+            Default: "email_verified".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.PhoneNumber">
+            <summary>
+            Default: "phone_number".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.PhoneNumberVerified">
+            <summary>
+            Default: "phone_number_verified".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.TenantId">
+            <summary>
+            Default: "tenantid".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.EditionId">
+            <summary>
+            Default: "editionid".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.ClientId">
+            <summary>
+            Default: "client_id".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.ImpersonatorTenantId">
+            <summary>
+            Default: "impersonator_tenantid".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Claims.AbpClaimTypes.ImpersonatorUserId">
+            <summary>
+            Default: "impersonator_userid".
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Security.Encryption.AbpStringEncryptionOptions">
+            <summary>
+            Options used by <see cref="T:Volo.Abp.Security.Encryption.IStringEncryptionService"/>.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Encryption.AbpStringEncryptionOptions.Keysize">
+            <summary>
+            This constant is used to determine the keysize of the encryption algorithm.
+            Default value: 256.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Encryption.AbpStringEncryptionOptions.DefaultPassPhrase">
+            <summary>
+            Default password to encrypt/decrypt texts.
+            It's recommended to set to another value for security.
+            Default value: "gsKnGZ041HLL4IM8"
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Encryption.AbpStringEncryptionOptions.InitVectorBytes">
+            <summary>
+            This constant string is used as a "salt" value for the PasswordDeriveBytes function calls.
+            This size of the IV (in bytes) must = (keysize / 8).  Default keysize is 256, so the IV must be
+            32 bytes long.  Using a 16 character string here gives us 32 bytes when converted to a byte array.
+            Default value: Encoding.ASCII.GetBytes("jkE49230Tf093b42")
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Security.Encryption.AbpStringEncryptionOptions.DefaultSalt">
+            <summary>
+            Default value: Encoding.ASCII.GetBytes("hgt!16kl")
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Security.Encryption.IStringEncryptionService">
+            <summary>
+            Can be used to simply encrypt/decrypt texts.
+            Use <see cref="T:Volo.Abp.Security.Encryption.AbpStringEncryptionOptions"/> to configure default values.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Security.Encryption.IStringEncryptionService.Encrypt(System.String,System.String,System.Byte[])">
+            <summary>
+            Encrypts a text.
+            </summary>
+            <param name="plainText">The text in plain format</param>
+            <param name="passPhrase">A phrase to use as the encryption key (optional, uses default if not provided)</param>
+            <param name="salt">Salt value (optional, uses default if not provided)</param>
+            <returns>Enrypted text</returns>
+        </member>
+        <member name="M:Volo.Abp.Security.Encryption.IStringEncryptionService.Decrypt(System.String,System.String,System.Byte[])">
+            <summary>
+            Decrypts a text that is encrypted by the <see cref="M:Volo.Abp.Security.Encryption.IStringEncryptionService.Encrypt(System.String,System.String,System.Byte[])"/> method.
+            </summary>
+            <param name="cipherText">The text in encrypted format</param>
+            <param name="passPhrase">A phrase to use as the encryption key (optional, uses default if not provided)</param>
+            <param name="salt">Salt value (optional, uses default if not provided)</param>
+            <returns>Decrypted text</returns>
+        </member>
+        <member name="T:Volo.Abp.Security.Encryption.StringEncryptionService">
+            <summary>
+            Can be used to simply encrypt/decrypt texts.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.SecurityLog.AbpSecurityLogOptions.IsEnabled">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.SecurityLog.AbpSecurityLogOptions.ApplicationName">
+            <summary>
+            The name of the application or service writing security log.
+            Default: null.
+            </summary>
+        </member>
+    </members>
+</doc>

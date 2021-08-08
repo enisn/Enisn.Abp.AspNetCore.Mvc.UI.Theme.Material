@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Features</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.Name">
+            <summary>
+            Unique name of the feature.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.Parent">
+            <summary>
+            Parent of this feature, if one exists.
+            If set, this feature can be enabled only if the parent is enabled.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.Children">
+            <summary>
+            List of child features.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.DefaultValue">
+            <summary>
+            Default value of the feature.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.IsVisibleToClients">
+            <summary>
+            Can clients see this feature and it's value.
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.IsAvailableToHost">
+            <summary>
+            Can host use this feature.
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.AllowedProviders">
+            <summary>
+            A list of allowed providers to get/set value of this feature.
+            An empty list indicates that all providers are allowed.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.Item(System.String)">
+            <summary>
+            Gets/sets a key-value on the <see cref="P:Volo.Abp.Features.FeatureDefinition.Properties"/>.
+            </summary>
+            <param name="name">Name of the property</param>
+            <returns>
+            Returns the value in the <see cref="P:Volo.Abp.Features.FeatureDefinition.Properties"/> dictionary by given <paramref name="name"/>.
+            Returns null if given <paramref name="name"/> is not present in the <see cref="P:Volo.Abp.Features.FeatureDefinition.Properties"/> dictionary.
+            </returns>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.Properties">
+            <summary>
+            Can be used to get/set custom properties for this feature.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureDefinition.ValueType">
+            <summary>
+            Input type.
+            This can be used to prepare an input for changing this feature's value.
+            Default: <see cref="T:Volo.Abp.Validation.StringValues.ToggleStringValueType"/>.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Features.FeatureDefinition.WithProperty(System.String,System.Object)">
+            <summary>
+            Sets a property in the <see cref="P:Volo.Abp.Features.FeatureDefinition.Properties"/> dictionary.
+            This is a shortcut for nested calls on this object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Features.FeatureDefinition.WithProviders(System.String[])">
+            <summary>
+            Sets a property in the <see cref="P:Volo.Abp.Features.FeatureDefinition.Properties"/> dictionary.
+            This is a shortcut for nested calls on this object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Features.FeatureDefinition.CreateChild(System.String,System.String,Volo.Abp.Localization.ILocalizableString,Volo.Abp.Localization.ILocalizableString,Volo.Abp.Validation.StringValues.IStringValueType,System.Boolean,System.Boolean)">
+            <summary>
+            Adds a child feature.
+            </summary>
+            <returns>Returns a newly created child feature</returns>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureGroupDefinition.Name">
+            <summary>
+            Unique name of the group.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.FeatureGroupDefinition.Item(System.String)">
+            <summary>
+            Gets/sets a key-value on the <see cref="P:Volo.Abp.Features.FeatureGroupDefinition.Properties"/>.
+            </summary>
+            <param name="name">Name of the property</param>
+            <returns>
+            Returns the value in the <see cref="P:Volo.Abp.Features.FeatureGroupDefinition.Properties"/> dictionary by given <paramref name="name"/>.
+            Returns null if given <paramref name="name"/> is not present in the <see cref="P:Volo.Abp.Features.FeatureGroupDefinition.Properties"/> dictionary.
+            </returns>
+        </member>
+        <member name="M:Volo.Abp.Features.FeatureGroupDefinition.WithProperty(System.String,System.Object)">
+            <summary>
+            Sets a property in the <see cref="P:Volo.Abp.Features.FeatureGroupDefinition.Properties"/> dictionary.
+            This is a shortcut for nested calls on this object.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Features.RequiresFeatureAttribute">
+            <summary>
+            This attribute can be used on a class/method to declare that given class/method is available
+            only if required feature(s) are enabled.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.RequiresFeatureAttribute.Features">
+            <summary>
+            A list of features to be checked if they are enabled.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Features.RequiresFeatureAttribute.RequiresAll">
+            <summary>
+            If this property is set to true, all of the <see cref="P:Volo.Abp.Features.RequiresFeatureAttribute.Features"/> must be enabled.
+            If it's false, at least one of the <see cref="P:Volo.Abp.Features.RequiresFeatureAttribute.Features"/> must be enabled.
+            Default: false.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Features.RequiresFeatureAttribute.#ctor(System.String[])">
+            <summary>
+            Creates a new instance of <see cref="T:Volo.Abp.Features.RequiresFeatureAttribute"/> class.
+            </summary>
+            <param name="features">A list of features to be checked if they are enabled</param>
+        </member>
+    </members>
+</doc>

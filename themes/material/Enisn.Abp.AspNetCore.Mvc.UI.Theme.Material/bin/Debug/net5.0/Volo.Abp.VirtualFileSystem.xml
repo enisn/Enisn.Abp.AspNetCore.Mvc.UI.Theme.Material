@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.VirtualFileSystem</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Extensions.FileProviders.AbpFileInfoExtensions.ReadAsString(Microsoft.Extensions.FileProviders.IFileInfo)">
+            <summary>
+            Reads file content as string using <see cref="P:System.Text.Encoding.UTF8"/> encoding.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.FileProviders.AbpFileInfoExtensions.ReadAsStringAsync(Microsoft.Extensions.FileProviders.IFileInfo)">
+            <summary>
+            Reads file content as string using <see cref="P:System.Text.Encoding.UTF8"/> encoding.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.FileProviders.AbpFileInfoExtensions.ReadAsString(Microsoft.Extensions.FileProviders.IFileInfo,System.Text.Encoding)">
+            <summary>
+            Reads file content as string using the given <paramref name="encoding"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.FileProviders.AbpFileInfoExtensions.ReadAsStringAsync(Microsoft.Extensions.FileProviders.IFileInfo,System.Text.Encoding)">
+            <summary>
+            Reads file content as string using the given <paramref name="encoding"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.FileProviders.AbpFileInfoExtensions.ReadBytes(Microsoft.Extensions.FileProviders.IFileInfo)">
+            <summary>
+            Reads file content as byte[].
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.FileProviders.AbpFileInfoExtensions.ReadBytesAsync(Microsoft.Extensions.FileProviders.IFileInfo)">
+            <summary>
+            Reads file content as byte[].
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.VirtualFileSystem.DynamicFileProvider">
+            <remarks>
+            Current implementation only supports file watch.
+            Does not support directory or wildcard watches.
+            </remarks>
+        </member>
+        <member name="T:Volo.Abp.VirtualFileSystem.Embedded.EmbeddedResourceFileInfo">
+            <summary>
+            Represents a file embedded in an assembly.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.VirtualFileSystem.Embedded.EmbeddedResourceFileInfo.LastModified">
+            <summary>
+            The time, in UTC.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.VirtualFileSystem.Embedded.EmbeddedResourceFileInfo.CreateReadStream">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

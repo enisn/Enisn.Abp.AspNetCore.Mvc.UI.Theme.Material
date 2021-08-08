@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.GlobalFeatures</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.GlobalFeatures.GlobalFeatureManager.Configuration">
+            <summary>
+            A common dictionary to store arbitrary configurations.
+            </summary>
+        </member>
+    </members>
+</doc>

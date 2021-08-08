@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.MultiTenancy</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.MultiTenancy.AbpMultiTenancyOptions.IsEnabled">
+            <summary>
+            A central point to enable/disable multi-tenancy.
+            Default: false. 
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.MultiTenancy.AbpMultiTenancyOptions.DatabaseStyle">
+            <summary>
+            Database style for tenants.
+            Default: <see cref="F:Volo.Abp.MultiTenancy.MultiTenancyDatabaseStyle.Hybrid"/>.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.MultiTenancy.BasicTenantInfo.TenantId">
+            <summary>
+            Null indicates the host.
+            Not null value for a tenant.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.MultiTenancy.BasicTenantInfo.Name">
+            <summary>
+            Name of the tenant if <see cref="P:Volo.Abp.MultiTenancy.BasicTenantInfo.TenantId"/> is not null.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.MultiTenancy.IMultiTenant.TenantId">
+            <summary>
+            Id of the related tenant.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.MultiTenancy.ITenantResolver.ResolveTenantIdOrNameAsync">
+            <summary>
+            Tries to resolve current tenant using registered <see cref="T:Volo.Abp.MultiTenancy.ITenantResolveContributor"/> implementations.
+            </summary>
+            <returns>
+            Tenant id, unique name or null (if could not resolve).
+            </returns>
+        </member>
+        <member name="T:Volo.Abp.MultiTenancy.MultiTenancySides">
+            <summary>
+            Represents sides in a multi tenancy application.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.MultiTenancy.MultiTenancySides.Tenant">
+            <summary>
+            Tenant side.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.MultiTenancy.MultiTenancySides.Host">
+            <summary>
+            Host side.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.MultiTenancy.MultiTenancySides.Both">
+            <summary>
+            Both sides
+            </summary>
+        </member>
+    </members>
+</doc>

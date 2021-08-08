@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Uow</name>
+    </assembly>
+    <members>
+        <member name="T:Volo.Abp.Uow.AbpUnitOfWorkDefaultOptions">
+            <summary>
+            Global (default) unit of work options
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.AbpUnitOfWorkDefaultOptions.TransactionBehavior">
+            <summary>
+            Default value: <see cref="F:Volo.Abp.Uow.UnitOfWorkTransactionBehavior.Auto"/>.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.AbpUnitOfWorkOptions.IsTransactional">
+            <summary>
+            Default: false.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.AbpUnitOfWorkOptions.Timeout">
+            <summary>
+            Milliseconds
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.IAbpUnitOfWorkOptions.Timeout">
+            <summary>
+            Milliseconds
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.UnitOfWork.EnableObsoleteDbContextCreationWarning">
+            <summary>
+            Default: false.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Uow.UnitOfWorkAttribute">
+            <summary>
+            Used to indicate that declaring method (or all methods of the class) is atomic and should be considered as a unit of work (UOW).
+            </summary>
+            <remarks>
+            This attribute has no effect if there is already a unit of work before calling this method. It uses the ambient UOW in this case.
+            </remarks>
+        </member>
+        <member name="P:Volo.Abp.Uow.UnitOfWorkAttribute.IsTransactional">
+            <summary>
+            Is this UOW transactional?
+            Uses default value if not supplied.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.UnitOfWorkAttribute.Timeout">
+            <summary>
+            Timeout of UOW As milliseconds.
+            Uses default value if not supplied.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.UnitOfWorkAttribute.IsolationLevel">
+            <summary>
+            If this UOW is transactional, this option indicated the isolation level of the transaction.
+            Uses default value if not supplied.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.UnitOfWorkAttribute.IsDisabled">
+            <summary>
+            Used to prevent starting a unit of work for the method.
+            If there is already a started unit of work, this property is ignored.
+            Default: false.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.UnitOfWorkEventArgs.UnitOfWork">
+            <summary>
+            Reference to the unit of work related to this event.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Uow.UnitOfWorkFailedEventArgs">
+            <summary>
+            Used as event arguments on <see cref="E:Volo.Abp.Uow.IUnitOfWork.Failed"/> event.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.UnitOfWorkFailedEventArgs.Exception">
+            <summary>
+            Exception that caused failure. This is set only if an error occurred during <see cref="M:Volo.Abp.Uow.IUnitOfWork.CompleteAsync(System.Threading.CancellationToken)"/>.
+            Can be null if there is no exception, but <see cref="M:Volo.Abp.Uow.IUnitOfWork.CompleteAsync(System.Threading.CancellationToken)"/> is not called.
+            Can be null if another exception occurred during the UOW.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Uow.UnitOfWorkFailedEventArgs.IsRolledback">
+            <summary>
+            True, if the unit of work is manually rolled back.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Uow.UnitOfWorkFailedEventArgs.#ctor(Volo.Abp.Uow.IUnitOfWork,System.Exception,System.Boolean)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Uow.UnitOfWorkFailedEventArgs"/> object.
+            </summary>
+        </member>
+    </members>
+</doc>

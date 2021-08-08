@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sandbox", "sandbox", "{04ECE5E7-FEE5-4E73-82C7-BCE187BB0C92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "themes", "themes", "{591332AB-069C-4AD6-BCC1-AE18518BA9ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox.Web", "sandbox\src\Sandbox.Web\Sandbox.Web.csproj", "{1FC09768-836A-4643-A1D6-1F30BC078D73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material", "themes\material\Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material\Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material.csproj", "{D63FEEF1-66BB-4B5A-9A6F-39CA151B941C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1FC09768-836A-4643-A1D6-1F30BC078D73} = {04ECE5E7-FEE5-4E73-82C7-BCE187BB0C92}
+		{D63FEEF1-66BB-4B5A-9A6F-39CA151B941C} = {591332AB-069C-4AD6-BCC1-AE18518BA9ED}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FC09768-836A-4643-A1D6-1F30BC078D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC09768-836A-4643-A1D6-1F30BC078D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC09768-836A-4643-A1D6-1F30BC078D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC09768-836A-4643-A1D6-1F30BC078D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D63FEEF1-66BB-4B5A-9A6F-39CA151B941C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63FEEF1-66BB-4B5A-9A6F-39CA151B941C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D63FEEF1-66BB-4B5A-9A6F-39CA151B941C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D63FEEF1-66BB-4B5A-9A6F-39CA151B941C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

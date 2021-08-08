@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.UI.Navigation</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.UI.Navigation.AbpNavigationOptions.MainMenuNames">
+            <summary>
+            Includes the <see cref="F:Volo.Abp.UI.Navigation.StandardMenus.Main"/> by default.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenu.Name">
+            <summary>
+            Unique name of the menu in the application.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenu.DisplayName">
+            <summary>
+            Display name of the menu.
+            Default value is the <see cref="P:Volo.Abp.UI.Navigation.ApplicationMenu.Name"/>.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenu.Items">
+            <inheritdoc cref="P:Volo.Abp.UI.Navigation.IHasMenuItems.Items"/>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenu.CustomData">
+            <summary>
+            Can be used to store a custom object related to this menu.
+            TODO: Convert to dictionary!
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.UI.Navigation.ApplicationMenu.AddItem(Volo.Abp.UI.Navigation.ApplicationMenuItem)">
+            <summary>
+            Adds a <see cref="T:Volo.Abp.UI.Navigation.ApplicationMenuItem"/> to <see cref="P:Volo.Abp.UI.Navigation.ApplicationMenu.Items"/>.
+            </summary>
+            <param name="menuItem"><see cref="T:Volo.Abp.UI.Navigation.ApplicationMenuItem"/> to be added</param>
+            <returns>This <see cref="T:Volo.Abp.UI.Navigation.ApplicationMenu"/> object</returns>
+        </member>
+        <member name="F:Volo.Abp.UI.Navigation.ApplicationMenuItem.DefaultOrder">
+            <summary>
+            Default <see cref="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.Order"/> value of a menu item.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.Name">
+            <summary>
+            Unique name of the menu in the application.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.DisplayName">
+            <summary>
+            Display name of the menu item.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.Order">
+            <summary>
+            The Display order of the menu.
+            Default value: 1000.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.Url">
+            <summary>
+            The URL to navigate when this menu item is selected.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.Icon">
+            <summary>
+            Icon of the menu item if exists.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.IsLeaf">
+            <summary>
+            Returns true if this menu item has no child <see cref="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.Items"/>.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.Target">
+            <summary>
+            Target of the menu item. Can be null, "_blank", "_self", "_parent", "_top" or a frame name for web applications.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.IsDisabled">
+            <summary>
+            Can be used to disable this menu item.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.Items">
+            <inheritdoc cref="P:Volo.Abp.UI.Navigation.IHasMenuItems.Items"/>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.CustomData">
+            <summary>
+            Can be used to store a custom object related to this menu item. Optional.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.ElementId">
+            <summary>
+            Can be used to render the element with a specific Id for DOM selections.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.CssClass">
+            <summary>
+            Can be used to render the element with extra CSS classes.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.UI.Navigation.ApplicationMenuItem.AddItem(Volo.Abp.UI.Navigation.ApplicationMenuItem)">
+            <summary>
+            Adds a <see cref="T:Volo.Abp.UI.Navigation.ApplicationMenuItem"/> to <see cref="P:Volo.Abp.UI.Navigation.ApplicationMenuItem.Items"/>.
+            </summary>
+            <param name="menuItem"><see cref="T:Volo.Abp.UI.Navigation.ApplicationMenuItem"/> to be added</param>
+            <returns>This <see cref="T:Volo.Abp.UI.Navigation.ApplicationMenuItem"/> object</returns>
+        </member>
+        <member name="P:Volo.Abp.UI.Navigation.IHasMenuItems.Items">
+            <summary>
+            Menu items.
+            </summary>
+        </member>
+    </members>
+</doc>

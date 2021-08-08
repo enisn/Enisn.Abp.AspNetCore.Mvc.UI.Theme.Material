@@ -1,0 +1,473 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Ddd.Application.Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:Volo.Abp.Application.Dtos.AuditedEntityDto">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IAuditedObject"/> interface.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.AuditedEntityDto.LastModificationTime">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.AuditedEntityDto.LastModifierId">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.AuditedEntityDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IAuditedObject"/> interface.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.AuditedEntityDto`1.LastModificationTime">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.AuditedEntityDto`1.LastModifierId">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IAuditedObject"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`1.Creator"/> and <see cref="P:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`1.LastModifier"/> objects as a DTOs represent the related user.
+            </summary>
+            <typeparam name="TUserDto">Type of the User DTO</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`1.Creator">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`1.LastModifier">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`2">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IAuditedObject"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`2.Creator"/> and <see cref="P:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`2.LastModifier"/> objects as a DTOs represent the related user.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+            <typeparam name="TUserDto">Type of the User DTO</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`2.Creator">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.AuditedEntityWithUserDto`2.LastModifier">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.CreationAuditedEntityDto">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.ICreationAuditedObject"/> interface.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.CreationAuditedEntityDto.CreationTime">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.CreationAuditedEntityDto.CreatorId">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.CreationAuditedEntityDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.ICreationAuditedObject"/> interface.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.CreationAuditedEntityDto`1.CreationTime">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.CreationAuditedEntityDto`1.CreatorId">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.CreationAuditedEntityWithUserDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.ICreationAuditedObject`1"/> interface.
+            It also has the <see cref="P:Volo.Abp.Application.Dtos.CreationAuditedEntityWithUserDto`1.Creator"/> object as a DTO represents the user.
+            </summary>
+            <typeparam name="TUserDto">Type of the User DTO</typeparam>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.CreationAuditedEntityWithUserDto`2">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.ICreationAuditedObject`1"/> interface.
+            It also has the <see cref="P:Volo.Abp.Application.Dtos.CreationAuditedEntityWithUserDto`2.Creator"/> object as a DTO represents the user.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+            <typeparam name="TUserDto">Type of the User DTO</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.EntityDto`1.Id">
+            <summary>
+            Id of the entity.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IAuditedObject"/> interface.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityDto`1.LastModificationTime">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityDto`1.LastModifierId">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityDto">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IAuditedObject"/> interface.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityDto.LastModificationTime">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityDto.LastModifierId">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`2">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IAuditedObject"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`2.Creator"/> and <see cref="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`2.LastModifier"/> objects as a DTOs represent the related user.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+            <typeparam name="TUserDto">Type of the User DTO</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`2.Creator">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`2.LastModifier">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IAuditedObject"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`1.Creator"/> and <see cref="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`1.LastModifier"/> objects as a DTOs represent the related user.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+            <typeparam name="TUserDto">Type of the User DTO</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`1.Creator">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleAuditedEntityWithUserDto`1.LastModifier">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.ICreationAuditedObject"/> interface.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityDto`1.CreationTime">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityDto`1.CreatorId">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityDto">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.ICreationAuditedObject"/> interface.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityDto.CreationTime">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityDto.CreatorId">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityWithUserDto`2">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.ICreationAuditedObject`1"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityWithUserDto`2.Creator"/> object as a DTO represents the user.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+            <typeparam name="TUserDto">Type of the User DTO</typeparam>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityWithUserDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.ICreationAuditedObject`1"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.ExtensibleCreationAuditedEntityWithUserDto`1.Creator"/> object as a DTO represents the user.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+            <typeparam name="TUserDto">Type of the User DTO</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleEntityDto`1.Id">
+            <summary>
+            Id of the entity.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IFullAuditedObject"/> interface.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityDto`1.IsDeleted">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityDto`1.DeleterId">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityDto`1.DeletionTime">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityDto">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IFullAuditedObject"/> interface.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityDto.IsDeleted">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityDto.DeleterId">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityDto.DeletionTime">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`2">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IFullAuditedObject`1"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`2.Creator"/>, <see cref="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`2.LastModifier"/> and <see cref="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`2.Deleter"/> objects as a DTOs represent the related user.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+            <typeparam name="TUserDto">Type of the User</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`2.Creator">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`2.LastModifier">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`2.Deleter">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IFullAuditedObject`1"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`1.Creator"/>, <see cref="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`1.LastModifier"/> and <see cref="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`1.Deleter"/> objects as a DTOs represent the related user.
+            It also implements the <see cref="T:Volo.Abp.Data.IHasExtraProperties"/> interface.
+            </summary>
+            <typeparam name="TUserDto">Type of the User</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`1.Creator">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`1.LastModifier">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ExtensibleFullAuditedEntityWithUserDto`1.Deleter">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.FullAuditedEntityDto">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IFullAuditedObject"/> interface.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityDto.IsDeleted">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityDto.DeleterId">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityDto.DeletionTime">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.FullAuditedEntityDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IFullAuditedObject"/> interface.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityDto`1.IsDeleted">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityDto`1.DeleterId">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityDto`1.DeletionTime">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`1">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IFullAuditedObject`1"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`1.Creator"/>, <see cref="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`1.LastModifier"/> and <see cref="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`1.Deleter"/> objects as a DTOs represent the related user.
+            </summary>
+            <typeparam name="TUserDto">Type of the User</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`1.Creator">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`1.LastModifier">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`1.Deleter">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`2">
+            <summary>
+            This class can be inherited by DTO classes to implement <see cref="T:Volo.Abp.Auditing.IFullAuditedObject`1"/> interface.
+            It has the <see cref="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`2.Creator"/>, <see cref="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`2.LastModifier"/> and <see cref="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`2.Deleter"/> objects as a DTOs represent the related user.
+            </summary>
+            <typeparam name="TPrimaryKey">Type of primary key</typeparam>
+            <typeparam name="TUserDto">Type of the User</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`2.Creator">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`2.LastModifier">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.FullAuditedEntityWithUserDto`2.Deleter">
+            <inheritdoc />
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.IHasTotalCount">
+            <summary>
+            This interface is defined to standardize to set "Total Count of Items" to a DTO.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.IHasTotalCount.TotalCount">
+            <summary>
+            Total count of Items.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ILimitedResultRequest">
+            <summary>
+            This interface is defined to standardize to request a limited result.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ILimitedResultRequest.MaxResultCount">
+            <summary>
+            Maximum result count should be returned.
+            This is generally used to limit result count on paging.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.IListResult`1">
+            <summary>
+            This interface is defined to standardize to return a list of items to clients.
+            </summary>
+            <typeparam name="T">Type of the items in the <see cref="P:Volo.Abp.Application.Dtos.IListResult`1.Items"/> list</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.IListResult`1.Items">
+            <summary>
+            List of items.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.IPagedAndSortedResultRequest">
+            <summary>
+            This interface is defined to standardize to request a paged and sorted result.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.IPagedResult`1">
+            <summary>
+            This interface is defined to standardize to return a page of items to clients.
+            </summary>
+            <typeparam name="T">Type of the items in the <see cref="P:Volo.Abp.Application.Dtos.IListResult`1.Items"/> list</typeparam>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.IPagedResultRequest">
+            <summary>
+            This interface is defined to standardize to request a paged result.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.IPagedResultRequest.SkipCount">
+            <summary>
+            Skip count (beginning of the page).
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.ISortedResultRequest">
+            <summary>
+            This interface is defined to standardize to request a sorted result.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ISortedResultRequest.Sorting">
+            <summary>
+            Sorting information.
+            Should include sorting field and optionally a direction (ASC or DESC)
+            Can contain more than one field separated by comma (,).
+            </summary>
+            <example>
+            Examples:
+            "Name"
+            "Name DESC"
+            "Name ASC, Age DESC"
+            </example>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.LimitedResultRequestDto">
+            <summary>
+            Simply implements <see cref="T:Volo.Abp.Application.Dtos.ILimitedResultRequest"/>.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.LimitedResultRequestDto.DefaultMaxResultCount">
+            <summary>
+            Default value: 10.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.LimitedResultRequestDto.MaxMaxResultCount">
+            <summary>
+            Maximum possible value of the <see cref="P:Volo.Abp.Application.Dtos.LimitedResultRequestDto.MaxResultCount"/>.
+            Default value: 1,000.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.LimitedResultRequestDto.MaxResultCount">
+            <summary>
+            Maximum result count should be returned.
+            This is generally used to limit result count on paging.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.ListResultDto`1.Items">
+            <inheritdoc />
+        </member>
+        <member name="M:Volo.Abp.Application.Dtos.ListResultDto`1.#ctor">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Application.Dtos.ListResultDto`1"/> object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Application.Dtos.ListResultDto`1.#ctor(System.Collections.Generic.IReadOnlyList{`0})">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Application.Dtos.ListResultDto`1"/> object.
+            </summary>
+            <param name="items">List of items</param>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.PagedAndSortedResultRequestDto">
+            <summary>
+            Simply implements <see cref="T:Volo.Abp.Application.Dtos.IPagedAndSortedResultRequest"/>.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.PagedResultDto`1">
+            <summary>
+            Implements <see cref="T:Volo.Abp.Application.Dtos.IPagedResult`1"/>.
+            </summary>
+            <typeparam name="T">Type of the items in the <see cref="P:Volo.Abp.Application.Dtos.ListResultDto`1.Items"/> list</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Application.Dtos.PagedResultDto`1.TotalCount">
+            <inheritdoc />
+        </member>
+        <member name="M:Volo.Abp.Application.Dtos.PagedResultDto`1.#ctor">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Application.Dtos.PagedResultDto`1"/> object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Application.Dtos.PagedResultDto`1.#ctor(System.Int64,System.Collections.Generic.IReadOnlyList{`0})">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Application.Dtos.PagedResultDto`1"/> object.
+            </summary>
+            <param name="totalCount">Total count of Items</param>
+            <param name="items">List of items in current page</param>
+        </member>
+        <member name="T:Volo.Abp.Application.Dtos.PagedResultRequestDto">
+            <summary>
+            Simply implements <see cref="T:Volo.Abp.Application.Dtos.IPagedResultRequest"/>.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Application.Services.IApplicationService">
+            <summary>
+            This interface must be implemented by all application services to register and identify them by convention.
+            </summary>
+        </member>
+    </members>
+</doc>

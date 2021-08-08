@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.AspNetCore.MultiTenancy</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyOptions.TenantKey">
+            <summary>
+            Default: <see cref="F:Volo.Abp.MultiTenancy.TenantResolverConsts.DefaultTenantKey"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

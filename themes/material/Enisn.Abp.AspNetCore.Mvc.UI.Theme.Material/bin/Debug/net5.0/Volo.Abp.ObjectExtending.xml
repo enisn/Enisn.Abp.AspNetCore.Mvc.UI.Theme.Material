@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.ObjectExtending</name>
+    </assembly>
+    <members>
+        <member name="M:Volo.Abp.ObjectExtending.ExtensibleObjectMapper.MapExtraPropertiesTo``2(``0,``1,System.Nullable{Volo.Abp.ObjectExtending.MappingPropertyDefinitionChecks},System.String[])">
+            <summary>
+            Copies extra properties from the <paramref name="source"/> object
+            to the <paramref name="destination"/> object.
+            
+            Checks property definitions (over the <see cref="T:Volo.Abp.ObjectExtending.ObjectExtensionManager"/>)
+            based on the <paramref name="definitionChecks"/> preference.
+            </summary>
+            <typeparam name="TSource">Source class type</typeparam>
+            <typeparam name="TDestination">Destination class type</typeparam>
+            <param name="source">The source object</param>
+            <param name="destination">The destination object</param>
+            <param name="definitionChecks">
+                Controls which properties to map.
+            </param>
+            <param name="ignoredProperties">Used to ignore some properties</param>
+        </member>
+        <member name="M:Volo.Abp.ObjectExtending.ExtensibleObjectMapper.MapExtraPropertiesTo``2(System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{Volo.Abp.ObjectExtending.MappingPropertyDefinitionChecks},System.String[])">
+             <summary>
+             Copies extra properties from the <paramref name="sourceDictionary"/> object
+             to the <paramref name="destinationDictionary"/> object.
+            
+             Checks property definitions (over the <see cref="T:Volo.Abp.ObjectExtending.ObjectExtensionManager"/>)
+             based on the <paramref name="definitionChecks"/> preference.
+             </summary>
+             <typeparam name="TSource">Source class type (for definition check)</typeparam>
+             <typeparam name="TDestination">Destination class type (for definition check)</typeparam>
+             <param name="sourceDictionary">The source dictionary object</param>
+             <param name="destinationDictionary">The destination dictionary object</param>
+             <param name="definitionChecks">
+             Controls which properties to map.
+             </param>
+             <param name="ignoredProperties">Used to ignore some properties</param>
+        </member>
+        <member name="M:Volo.Abp.ObjectExtending.ExtensibleObjectMapper.MapExtraPropertiesTo(System.Type,System.Type,System.Collections.Generic.Dictionary{System.String,System.Object},System.Collections.Generic.Dictionary{System.String,System.Object},System.Nullable{Volo.Abp.ObjectExtending.MappingPropertyDefinitionChecks},System.String[])">
+            <summary>
+            Copies extra properties from the <paramref name="sourceDictionary"/> object
+            to the <paramref name="destinationDictionary"/> object.
+            
+            Checks property definitions (over the <see cref="T:Volo.Abp.ObjectExtending.ObjectExtensionManager"/>)
+            based on the <paramref name="definitionChecks"/> preference.
+            </summary>
+            <param name="sourceType">Source type (for definition check)</param>
+            <param name="destinationType">Destination class type (for definition check)</param>
+            <param name="sourceDictionary">The source dictionary object</param>
+            <param name="destinationDictionary">The destination dictionary object</param>
+            <param name="definitionChecks">
+            Controls which properties to map.
+            </param>
+            <param name="ignoredProperties">Used to ignore some properties</param>
+        </member>
+        <member name="M:Volo.Abp.ObjectExtending.HasExtraPropertiesObjectExtendingExtensions.MapExtraPropertiesTo``2(``0,``1,System.Nullable{Volo.Abp.ObjectExtending.MappingPropertyDefinitionChecks},System.String[])">
+            <summary>
+            Copies extra properties from the <paramref name="source"/> object
+            to the <paramref name="destination"/> object.
+            
+            Checks property definitions (over the <see cref="T:Volo.Abp.ObjectExtending.ObjectExtensionManager"/>)
+            based on the <paramref name="definitionChecks"/> preference.
+            </summary>
+            <typeparam name="TSource">Source class type</typeparam>
+            <typeparam name="TDestination">Destination class type</typeparam>
+            <param name="source">The source object</param>
+            <param name="destination">The destination object</param>
+            <param name="definitionChecks">
+                Controls which properties to map.
+            </param>
+            <param name="ignoredProperties">Used to ignore some properties</param>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.IBasicObjectExtensionPropertyInfo.DefaultValue">
+            <summary>
+            Uses as the default value if <see cref="P:Volo.Abp.ObjectExtending.IBasicObjectExtensionPropertyInfo.DefaultValueFactory"/> was not set.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.IBasicObjectExtensionPropertyInfo.DefaultValueFactory">
+            <summary>
+            Used with the first priority to create the default value for the property.
+            Uses to the <see cref="P:Volo.Abp.ObjectExtending.IBasicObjectExtensionPropertyInfo.DefaultValue"/> if this was not set.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.ObjectExtending.MappingPropertyDefinitionChecks.None">
+            <summary>
+            No check. Copy all extra properties from the source to the destination.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.ObjectExtending.MappingPropertyDefinitionChecks.Source">
+            <summary>
+            Copy the extra properties defined for the source class.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.ObjectExtending.MappingPropertyDefinitionChecks.Destination">
+            <summary>
+            Copy the extra properties defined for the destination class.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.ObjectExtending.MappingPropertyDefinitionChecks.Both">
+            <summary>
+            Copy extra properties defined for both of the source and destination classes.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyApiCreateConfiguration.IsAvailable">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyApiGetConfiguration.IsAvailable">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyApiUpdateConfiguration.IsAvailable">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyConfiguration.IsAvailableToClients">
+            <summary>
+            Single point to enable/disable this property for the clients (UI and API).
+            If this is false, the configuration made in the <see cref="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyConfiguration.UI"/> and the <see cref="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyConfiguration.Api"/>
+            properties are not used.
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyConfiguration.DefaultValue">
+            <summary>
+            Uses as the default value if <see cref="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyConfiguration.DefaultValueFactory"/> was not set.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyConfiguration.DefaultValueFactory">
+            <summary>
+            Used with the first priority to create the default value for the property.
+            Uses to the <see cref="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyConfiguration.DefaultValue"/> if this was not set.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyEntityConfiguration.IsAvailable">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyLookupConfiguration.ResultListPropertyName">
+            <summary>
+            Default value: "items".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyLookupConfiguration.DisplayPropertyName">
+            <summary>
+            Default value: "text".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyLookupConfiguration.ValuePropertyName">
+            <summary>
+            Default value: "id".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyLookupConfiguration.FilterParamName">
+            <summary>
+            Default value: "filter".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyUiFormConfiguration.IsVisible">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.Modularity.ExtensionPropertyUiTableConfiguration.IsVisible">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyInfo.CheckPairDefinitionOnMapping">
+             <summary>
+             Indicates whether to check the other side of the object mapping
+             if it explicitly defines the property. This property is used in;
+            
+             * .MapExtraPropertiesTo() extension method.
+             * .MapExtraProperties() configuration for the AutoMapper.
+            
+             It this is true, these methods check if the mapping object
+             has defined the property using the <see cref="T:Volo.Abp.ObjectExtending.ObjectExtensionManager"/>.
+            
+             Default: null (unspecified, uses the default logic).
+             </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyInfo.DefaultValue">
+            <summary>
+            Uses as the default value if <see cref="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyInfo.DefaultValueFactory"/> was not set.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyInfo.DefaultValueFactory">
+            <summary>
+            Used with the first priority to create the default value for the property.
+            Uses to the <see cref="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyInfo.DefaultValue"/> if this was not set.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyValidationContext.ExtensionPropertyInfo">
+            <summary>
+            Related property extension information.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyValidationContext.ValidatingObject">
+            <summary>
+            Reference to the validating object.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyValidationContext.ValidationErrors">
+            <summary>
+            Add validation errors to this list.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyValidationContext.ValidationContext">
+            <summary>
+            Validation context comes from the <see cref="M:System.ComponentModel.DataAnnotations.IValidatableObject.Validate(System.ComponentModel.DataAnnotations.ValidationContext)"/> method.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyValidationContext.Value">
+            <summary>
+            The value of the validating property of the <see cref="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyValidationContext.ValidatingObject"/>.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionPropertyValidationContext.ServiceProvider">
+            <summary>
+            Can be used to resolve services from the dependency injection container.
+            This can be null when SetProperty method is used on the object.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionValidationContext.ObjectExtensionInfo">
+            <summary>
+            Related object extension information.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionValidationContext.ValidatingObject">
+            <summary>
+            Reference to the validating object.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionValidationContext.ValidationErrors">
+            <summary>
+            Add validation errors to this list.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionValidationContext.ValidationContext">
+            <summary>
+            Validation context comes from the <see cref="M:System.ComponentModel.DataAnnotations.IValidatableObject.Validate(System.ComponentModel.DataAnnotations.ValidationContext)"/> method.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ObjectExtending.ObjectExtensionValidationContext.ServiceProvider">
+            <summary>
+            Can be used to resolve services from the dependency injection container.
+            </summary>
+        </member>
+    </members>
+</doc>

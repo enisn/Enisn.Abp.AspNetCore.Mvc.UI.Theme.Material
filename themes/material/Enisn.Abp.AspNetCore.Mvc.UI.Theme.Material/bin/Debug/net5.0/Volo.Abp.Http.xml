@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Http</name>
+    </assembly>
+    <members>
+        <member name="F:Volo.Abp.Http.Modeling.ModuleApiDescriptionModel.DefaultRootPath">
+            <summary>
+            "app".
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.Http.Modeling.ModuleApiDescriptionModel.DefaultRemoteServiceName">
+            <summary>
+            "Default".
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.Http.ProxyScripting.Generators.JQuery.JQueryProxyScriptGenerator.Name">
+            <summary>
+            "jquery".
+            </summary>
+        </member>
+    </members>
+</doc>

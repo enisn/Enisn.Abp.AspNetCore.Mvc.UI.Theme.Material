@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Localization</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.Localization.AbpLocalizationOptions.DefaultResourceType">
+            <summary>
+            Used as the default resource when resource was not specified on a localization operation.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Localization.ILocalizationDictionary">
+            <summary>
+            Represents a dictionary that is used to find a localized string.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Localization.Json.JsonLocalizationDictionaryBuilder.BuildFromFile(System.String)">
+            <summary>
+                Builds an <see cref="T:Volo.Abp.Localization.Json.JsonLocalizationDictionaryBuilder" /> from given file.
+            </summary>
+            <param name="filePath">Path of the file</param>
+        </member>
+        <member name="M:Volo.Abp.Localization.Json.JsonLocalizationDictionaryBuilder.BuildFromJsonString(System.String)">
+            <summary>
+                Builds an <see cref="T:Volo.Abp.Localization.Json.JsonLocalizationDictionaryBuilder" /> from given json string.
+            </summary>
+            <param name="jsonString">Json string</param>
+        </member>
+        <member name="P:Volo.Abp.Localization.Json.JsonLocalizationFile.Culture">
+            <summary>
+            Culture name; eg : en , en-us, zh-CN
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Localization.LocalizationSettingHelper.ParseLanguageSetting(System.String)">
+            <summary>
+            Gets a setting value like "en-US;en" and returns as splitted values like ("en-US", "en").
+            </summary>
+            <param name="settingValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Volo.Abp.Localization.StaticLocalizationDictionary">
+            <summary>
+            Represents a simple implementation of <see cref="T:Volo.Abp.Localization.ILocalizationDictionary"/> interface.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Localization.StaticLocalizationDictionary.CultureName">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Localization.StaticLocalizationDictionary.#ctor(System.String,System.Collections.Generic.Dictionary{System.String,Microsoft.Extensions.Localization.LocalizedString})">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Localization.StaticLocalizationDictionary"/> object.
+            </summary>
+            <param name="cultureName">Culture of the dictionary</param>
+            <param name="dictionary">The dictionary</param>
+        </member>
+        <member name="M:Volo.Abp.Localization.StaticLocalizationDictionary.GetOrNull(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Volo.Abp.Localization.AbpInternalLocalizationHelper">
+            <summary>
+            This class is designed to be used internal by the framework.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Localization.AbpInternalLocalizationHelper.LocalizeWithFallback(Microsoft.Extensions.Localization.IStringLocalizer[],System.String[],System.String)">
+            <summary>
+            Searches an array of keys in an array of localizers.
+            </summary>
+            <param name="localizers">
+            An array of localizers. Search the keys on the localizers.
+            Can contain null items in the array.
+            </param>
+            <param name="keys">
+            An array of keys. Search the keys on the localizers.
+            Should not contain null items in the array.
+            </param>
+            <param name="defaultValue">
+            Return value if none of the localizers has none of the keys.
+            </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

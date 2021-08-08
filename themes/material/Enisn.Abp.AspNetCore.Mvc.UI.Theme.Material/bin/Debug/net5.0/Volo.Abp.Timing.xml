@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Timing</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.Timing.AbpClockOptions.Kind">
+            <summary>
+            Default: <see cref="F:System.DateTimeKind.Unspecified"/>
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Timing.IClock.Now">
+            <summary>
+            Gets Now.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Timing.IClock.Kind">
+            <summary>
+            Gets kind.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Timing.IClock.SupportsMultipleTimezone">
+            <summary>
+            Is that provider supports multiple time zone.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Timing.IClock.Normalize(System.DateTime)">
+            <summary>
+            Normalizes given <see cref="T:System.DateTime"/>.
+            </summary>
+            <param name="dateTime">DateTime to be normalized.</param>
+            <returns>Normalized DateTime</returns>
+        </member>
+    </members>
+</doc>

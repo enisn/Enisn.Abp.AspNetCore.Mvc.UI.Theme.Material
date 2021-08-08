@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.ExceptionHandling</name>
+    </assembly>
+    <members>
+        <member name="T:Volo.Abp.AspNetCore.ExceptionHandling.IExceptionToErrorInfoConverter">
+            <summary>
+            This interface can be implemented to convert an <see cref="T:System.Exception"/> object to an <see cref="T:Volo.Abp.Http.RemoteServiceErrorInfo"/> object.
+            Implements Chain Of Responsibility pattern.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.AspNetCore.ExceptionHandling.IExceptionToErrorInfoConverter.Convert(System.Exception,System.Boolean)">
+            <summary>
+            Converter method.
+            </summary>
+            <param name="exception">The exception</param>
+            <param name="includeSensitiveDetails">Should include sensitive details to the error info?</param>
+            <returns>Error info or null</returns>
+        </member>
+        <member name="T:Volo.Abp.Domain.Entities.EntityNotFoundException">
+            <summary>
+            This exception is thrown if an entity excepted to be found but not found.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Domain.Entities.EntityNotFoundException.EntityType">
+            <summary>
+            Type of the entity.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Domain.Entities.EntityNotFoundException.Id">
+            <summary>
+            Id of the Entity.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Domain.Entities.EntityNotFoundException.#ctor">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Domain.Entities.EntityNotFoundException"/> object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Domain.Entities.EntityNotFoundException.#ctor(System.Type)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Domain.Entities.EntityNotFoundException"/> object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Domain.Entities.EntityNotFoundException.#ctor(System.Type,System.Object)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Domain.Entities.EntityNotFoundException"/> object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Domain.Entities.EntityNotFoundException.#ctor(System.Type,System.Object,System.Exception)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Domain.Entities.EntityNotFoundException"/> object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Domain.Entities.EntityNotFoundException.#ctor(System.String)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Domain.Entities.EntityNotFoundException"/> object.
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="M:Volo.Abp.Domain.Entities.EntityNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Domain.Entities.EntityNotFoundException"/> object.
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="innerException">Inner exception</param>
+        </member>
+        <member name="T:Volo.Abp.Http.RemoteServiceErrorInfo">
+            <summary>
+            Used to store information about an error.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Http.RemoteServiceErrorInfo.Code">
+            <summary>
+            Error code.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Http.RemoteServiceErrorInfo.Message">
+            <summary>
+            Error message.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Http.RemoteServiceErrorInfo.Details">
+            <summary>
+            Error details.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Http.RemoteServiceErrorInfo.ValidationErrors">
+            <summary>
+            Validation errors if exists.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Http.RemoteServiceErrorInfo.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:Volo.Abp.Http.RemoteServiceErrorInfo"/>.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Http.RemoteServiceErrorInfo.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:Volo.Abp.Http.RemoteServiceErrorInfo"/>.
+            </summary>
+            <param name="code">Error code</param>
+            <param name="details">Error details</param>
+            <param name="message">Error message</param>
+        </member>
+        <member name="T:Volo.Abp.Http.RemoteServiceValidationErrorInfo">
+            <summary>
+            Used to store information about a validation error.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Http.RemoteServiceValidationErrorInfo.Message">
+            <summary>
+            Validation error message.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Http.RemoteServiceValidationErrorInfo.Members">
+            <summary>
+            Relate invalid members (fields/properties).
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Http.RemoteServiceValidationErrorInfo.#ctor">
+            <summary>
+            Creates a new instance of <see cref="T:Volo.Abp.Http.RemoteServiceValidationErrorInfo"/>.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Http.RemoteServiceValidationErrorInfo.#ctor(System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:Volo.Abp.Http.RemoteServiceValidationErrorInfo"/>.
+            </summary>
+            <param name="message">Validation error message</param>
+        </member>
+        <member name="M:Volo.Abp.Http.RemoteServiceValidationErrorInfo.#ctor(System.String,System.String[])">
+            <summary>
+            Creates a new instance of <see cref="T:Volo.Abp.Http.RemoteServiceValidationErrorInfo"/>.
+            </summary>
+            <param name="message">Validation error message</param>
+            <param name="members">Related invalid members</param>
+        </member>
+        <member name="M:Volo.Abp.Http.RemoteServiceValidationErrorInfo.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:Volo.Abp.Http.RemoteServiceValidationErrorInfo"/>.
+            </summary>
+            <param name="message">Validation error message</param>
+            <param name="member">Related invalid member</param>
+        </member>
+    </members>
+</doc>

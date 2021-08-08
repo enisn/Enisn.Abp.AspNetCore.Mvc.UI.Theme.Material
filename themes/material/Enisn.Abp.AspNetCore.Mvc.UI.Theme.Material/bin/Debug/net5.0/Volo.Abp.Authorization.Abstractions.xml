@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Authorization.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Volo.Abp.Authorization.Permissions.AlwaysAllowPermissionChecker">
+             <summary>
+             Always allows for any permission.
+            
+             Use IServiceCollection.AddAlwaysAllowAuthorization() to replace
+             IPermissionChecker with this class. This is useful for tests.
+             </summary>
+        </member>
+        <member name="M:Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext.GetGroup(System.String)">
+            <summary>
+            Gets a pre-defined permission group.
+            Throws <see cref="T:Volo.Abp.AbpException"/> if can not find the given group.
+            </summary>
+            <param name="name">Name of the group</param>
+            <returns></returns>
+        </member>
+        <member name="M:Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext.GetGroupOrNull(System.String)">
+            <summary>
+            Tries to get a pre-defined permission group.
+            Returns null if can not find the given group.
+            </summary>
+            <param name="name">Name of the group</param>
+            <returns></returns>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.Name">
+            <summary>
+            Unique name of the permission.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.Parent">
+            <summary>
+            Parent of this permission if one exists.
+            If set, this permission can be granted only if parent is granted.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.MultiTenancySide">
+            <summary>
+            MultiTenancy side.
+            Default: <see cref="F:Volo.Abp.MultiTenancy.MultiTenancySides.Both"/>
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.Providers">
+            <summary>
+            A list of allowed providers to get/set value of this permission.
+            An empty list indicates that all providers are allowed.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.Properties">
+            <summary>
+            Can be used to get/set custom properties for this permission definition.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.IsEnabled">
+             <summary>
+             Indicates whether this permission is enabled or disabled.
+             A permission is normally enabled.
+             A disabled permission can not be granted to anyone, but it is still
+             will be available to check its value (while it will always be false).
+            
+             Disabling a permission would be helpful to hide a related application
+             functionality from users/clients.
+            
+             Default: true.
+             </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.Item(System.String)">
+            <summary>
+            Gets/sets a key-value on the <see cref="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.Properties"/>.
+            </summary>
+            <param name="name">Name of the property</param>
+            <returns>
+            Returns the value in the <see cref="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.Properties"/> dictionary by given <paramref name="name"/>.
+            Returns null if given <paramref name="name"/> is not present in the <see cref="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.Properties"/> dictionary.
+            </returns>
+        </member>
+        <member name="M:Volo.Abp.Authorization.Permissions.PermissionDefinition.WithProperty(System.String,System.Object)">
+            <summary>
+            Sets a property in the <see cref="P:Volo.Abp.Authorization.Permissions.PermissionDefinition.Properties"/> dictionary.
+            This is a shortcut for nested calls on this object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Authorization.Permissions.PermissionDefinition.WithProviders(System.String[])">
+            <summary>
+            Set the <see cref="!:StateProviders"/> property.
+            This is a shortcut for nested calls on this object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Authorization.Permissions.PermissionDefinitionContextExtensions.TryDisablePermission(Volo.Abp.Authorization.Permissions.IPermissionDefinitionContext,System.String)">
+            <summary>
+            Finds and disables a permission with the given <paramref name="name"/>.
+            Returns false if given permission was not found.
+            </summary>
+            <param name="context">Permission definition context</param>
+            <param name="name">Name of the permission</param>
+            <returns>
+            Returns true if given permission was found.
+            Returns false if given permission was not found.
+            </returns>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionGroupDefinition.Name">
+            <summary>
+            Unique name of the group.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionGroupDefinition.MultiTenancySide">
+            <summary>
+            MultiTenancy side.
+            Default: <see cref="F:Volo.Abp.MultiTenancy.MultiTenancySides.Both"/>
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Authorization.Permissions.PermissionGroupDefinition.Item(System.String)">
+            <summary>
+            Gets/sets a key-value on the <see cref="P:Volo.Abp.Authorization.Permissions.PermissionGroupDefinition.Properties"/>.
+            </summary>
+            <param name="name">Name of the property</param>
+            <returns>
+            Returns the value in the <see cref="P:Volo.Abp.Authorization.Permissions.PermissionGroupDefinition.Properties"/> dictionary by given <paramref name="name"/>.
+            Returns null if given <paramref name="name"/> is not present in the <see cref="P:Volo.Abp.Authorization.Permissions.PermissionGroupDefinition.Properties"/> dictionary.
+            </returns>
+        </member>
+    </members>
+</doc>

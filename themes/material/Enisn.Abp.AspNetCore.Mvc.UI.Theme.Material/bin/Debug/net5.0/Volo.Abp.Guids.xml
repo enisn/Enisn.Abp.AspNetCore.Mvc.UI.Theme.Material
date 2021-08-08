@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Guids</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.Guids.AbpSequentialGuidGeneratorOptions.DefaultSequentialGuidType">
+            <summary>
+            Default value: null (unspecified).
+            Use <see cref="M:Volo.Abp.Guids.AbpSequentialGuidGeneratorOptions.GetDefaultSequentialGuidType"/> method
+            to get the value on use, since it fall backs to a default value.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Guids.AbpSequentialGuidGeneratorOptions.GetDefaultSequentialGuidType">
+            <summary>
+            Get the <see cref="P:Volo.Abp.Guids.AbpSequentialGuidGeneratorOptions.DefaultSequentialGuidType"/> value
+            or returns <see cref="F:Volo.Abp.Guids.SequentialGuidType.SequentialAtEnd"/>
+            if <see cref="P:Volo.Abp.Guids.AbpSequentialGuidGeneratorOptions.DefaultSequentialGuidType"/> was null.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Guids.IGuidGenerator">
+            <summary>
+            Used to generate Ids.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Guids.IGuidGenerator.Create">
+            <summary>
+            Creates a new <see cref="T:System.Guid"/>.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Guids.SequentialGuidGenerator">
+            <summary>
+            Implements <see cref="T:Volo.Abp.Guids.IGuidGenerator"/> by creating sequential Guids.
+            Use <see cref="T:Volo.Abp.Guids.AbpSequentialGuidGeneratorOptions"/> to configure.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Guids.SequentialGuidType">
+            <summary>
+            Describes the type of a sequential GUID value.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.Guids.SequentialGuidType.SequentialAsString">
+            <summary>
+            The GUID should be sequential when formatted using the <see cref="!:Guid.ToString()" /> method.
+            Used by MySql and PostgreSql.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.Guids.SequentialGuidType.SequentialAsBinary">
+            <summary>
+            The GUID should be sequential when formatted using the <see cref="!:Guid.ToByteArray" /> method.
+            Used by Oracle.
+            </summary>
+        </member>
+        <member name="F:Volo.Abp.Guids.SequentialGuidType.SequentialAtEnd">
+            <summary>
+            The sequential portion of the GUID should be located at the end of the Data4 block.
+            Used by SqlServer.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Guids.SimpleGuidGenerator">
+            <summary>
+            Implements <see cref="T:Volo.Abp.Guids.IGuidGenerator"/> by using <see cref="M:System.Guid.NewGuid"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

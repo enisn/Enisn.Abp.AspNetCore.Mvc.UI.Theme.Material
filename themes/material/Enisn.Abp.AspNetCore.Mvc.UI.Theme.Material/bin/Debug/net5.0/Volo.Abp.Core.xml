@@ -1,0 +1,1536 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Core</name>
+    </assembly>
+    <members>
+        <member name="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.UserSecretsAssembly">
+            <summary>
+            Used to set assembly which is used to get the user secret id for the application.
+            Use this or <see cref="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.UserSecretsId"/> (higher priority)
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.UserSecretsId">
+            <summary>
+            Used to set user secret id for the application.
+            Use this (higher priority) or <see cref="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.UserSecretsAssembly"/>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.FileName">
+            <summary>
+            Default value: "appsettings".
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.EnvironmentName">
+            <summary>
+            Environment name. Generally used "Development", "Staging" or "Production".
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.BasePath">
+            <summary>
+            Base path to read the configuration file indicated by <see cref="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.FileName"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.EnvironmentVariablesPrefix">
+            <summary>
+            Prefix for the environment variables.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Extensions.Configuration.AbpConfigurationBuilderOptions.CommandLineArgs">
+            <summary>
+            Command line arguments.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionCommonExtensions.GetService``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Resolves a dependency using given <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            This method should be used only after dependency injection registration phase completed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionCommonExtensions.GetService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)">
+            <summary>
+            Resolves a dependency using given <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            This method should be used only after dependency injection registration phase completed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionCommonExtensions.GetRequiredService``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Resolves a dependency using given <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            Throws exception if service is not registered.
+            This method should be used only after dependency injection registration phase completed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionCommonExtensions.GetRequiredService(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)">
+            <summary>
+            Resolves a dependency using given <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            Throws exception if service is not registered.
+            This method should be used only after dependency injection registration phase completed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionCommonExtensions.GetServiceLazy``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Returns a <see cref="T:System.Lazy`1"/> to resolve a service from given <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
+            once dependency injection registration phase completed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionCommonExtensions.GetServiceLazy(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)">
+            <summary>
+            Returns a <see cref="T:System.Lazy`1"/> to resolve a service from given <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
+            once dependency injection registration phase completed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionCommonExtensions.GetRequiredServiceLazy``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Returns a <see cref="T:System.Lazy`1"/> to resolve a service from given <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
+            once dependency injection registration phase completed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Extensions.DependencyInjection.ServiceCollectionCommonExtensions.GetRequiredServiceLazy(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Type)">
+            <summary>
+            Returns a <see cref="T:System.Lazy`1"/> to resolve a service from given <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
+            once dependency injection registration phase completed.
+            </summary>
+        </member>
+        <member name="T:System.AbpComparableExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.IComparable`1"/>.
+            </summary>
+        </member>
+        <member name="M:System.AbpComparableExtensions.IsBetween``1(``0,``0,``0)">
+            <summary>
+            Checks a value is between a minimum and maximum value.
+            </summary>
+            <param name="value">The value to be checked</param>
+            <param name="minInclusiveValue">Minimum (inclusive) value</param>
+            <param name="maxInclusiveValue">Maximum (inclusive) value</param>
+        </member>
+        <member name="T:System.AbpDateTimeExtensions">
+            <summary>
+            Extension methods for the <see cref="T:System.DateTime"/>.
+            </summary>
+        </member>
+        <member name="T:System.AbpDayOfWeekExtensions">
+            <summary>
+            Extension methods for the <see cref="T:System.DayOfWeek"/>.
+            </summary>
+        </member>
+        <member name="M:System.AbpDayOfWeekExtensions.IsWeekend(System.DayOfWeek)">
+            <summary>
+            Check if given <see cref="T:System.DayOfWeek"/> value is weekend.
+            </summary>
+        </member>
+        <member name="M:System.AbpDayOfWeekExtensions.IsWeekday(System.DayOfWeek)">
+            <summary>
+            Check if given <see cref="T:System.DayOfWeek"/> value is weekday.
+            </summary>
+        </member>
+        <member name="T:System.AbpEventHandlerExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.EventHandler"/>.
+            </summary>
+        </member>
+        <member name="M:System.AbpEventHandlerExtensions.InvokeSafely(System.EventHandler,System.Object)">
+            <summary>
+            Raises given event safely with given arguments.
+            </summary>
+            <param name="eventHandler">The event handler</param>
+            <param name="sender">Source of the event</param>
+        </member>
+        <member name="M:System.AbpEventHandlerExtensions.InvokeSafely(System.EventHandler,System.Object,System.EventArgs)">
+            <summary>
+            Raises given event safely with given arguments.
+            </summary>
+            <param name="eventHandler">The event handler</param>
+            <param name="sender">Source of the event</param>
+            <param name="e">Event argument</param>
+        </member>
+        <member name="M:System.AbpEventHandlerExtensions.InvokeSafely``1(System.EventHandler{``0},System.Object,``0)">
+            <summary>
+            Raises given event safely with given arguments.
+            </summary>
+            <typeparam name="TEventArgs">Type of the <see cref="T:System.EventArgs"/></typeparam>
+            <param name="eventHandler">The event handler</param>
+            <param name="sender">Source of the event</param>
+            <param name="e">Event argument</param>
+        </member>
+        <member name="T:System.AbpExceptionExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Exception"/> class.
+            </summary>
+        </member>
+        <member name="M:System.AbpExceptionExtensions.ReThrow(System.Exception)">
+            <summary>
+            Uses <see cref="M:System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(System.Exception)"/> method to re-throws exception
+            while preserving stack trace.
+            </summary>
+            <param name="exception">Exception to be re-thrown</param>
+        </member>
+        <member name="M:System.AbpExceptionExtensions.GetLogLevel(System.Exception,Microsoft.Extensions.Logging.LogLevel)">
+            <summary>
+            Try to get a log level from the given <paramref name="exception"/>
+            if it implements the <see cref="T:Volo.Abp.Logging.IHasLogLevel"/> interface.
+            Otherwise, returns the <paramref name="defaultLevel"/>.
+            </summary>
+            <param name="exception"></param>
+            <param name="defaultLevel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:System.AbpObjectExtensions">
+            <summary>
+            Extension methods for all objects.
+            </summary>
+        </member>
+        <member name="M:System.AbpObjectExtensions.As``1(System.Object)">
+            <summary>
+            Used to simplify and beautify casting an object to a type.
+            </summary>
+            <typeparam name="T">Type to be casted</typeparam>
+            <param name="obj">Object to cast</param>
+            <returns>Casted object</returns>
+        </member>
+        <member name="M:System.AbpObjectExtensions.To``1(System.Object)">
+            <summary>
+            Converts given object to a value type using <see cref="M:System.Convert.ChangeType(System.Object,System.Type)"/> method.
+            </summary>
+            <param name="obj">Object to be converted</param>
+            <typeparam name="T">Type of the target object</typeparam>
+            <returns>Converted object</returns>
+        </member>
+        <member name="M:System.AbpObjectExtensions.IsIn``1(``0,``0[])">
+            <summary>
+            Check if an item is in a list.
+            </summary>
+            <param name="item">Item to check</param>
+            <param name="list">List of items</param>
+            <typeparam name="T">Type of the items</typeparam>
+        </member>
+        <member name="M:System.AbpObjectExtensions.IsIn``1(``0,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Check if an item is in the given enumerable.
+            </summary>
+            <param name="item">Item to check</param>
+            <param name="items">Items</param>
+            <typeparam name="T">Type of the items</typeparam>
+        </member>
+        <member name="M:System.AbpObjectExtensions.If``1(``0,System.Boolean,System.Func{``0,``0})">
+            <summary>
+            Can be used to conditionally perform a function
+            on an object and return the modified or the original object.
+            It is useful for chained calls.
+            </summary>
+            <param name="obj">An object</param>
+            <param name="condition">A condition</param>
+            <param name="func">A function that is executed only if the condition is <code>true</code></param>
+            <typeparam name="T">Type of the object</typeparam>
+            <returns>
+            Returns the modified object (by the <paramref name="func"/> if the <paramref name="condition"/> is <code>true</code>)
+            or the original object if the <paramref name="condition"/> is <code>false</code>
+            </returns>
+        </member>
+        <member name="M:System.AbpObjectExtensions.If``1(``0,System.Boolean,System.Action{``0})">
+            <summary>
+            Can be used to conditionally perform an action
+            on an object and return the original object.
+            It is useful for chained calls on the object.
+            </summary>
+            <param name="obj">An object</param>
+            <param name="condition">A condition</param>
+            <param name="action">An action that is executed only if the condition is <code>true</code></param>
+            <typeparam name="T">Type of the object</typeparam>
+            <returns>
+            Returns the original object.
+            </returns>
+        </member>
+        <member name="T:System.AbpStringExtensions">
+            <summary>
+            Extension methods for String class.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.EnsureEndsWith(System.String,System.Char,System.StringComparison)">
+            <summary>
+            Adds a char to end of given string if it does not ends with the char.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.EnsureStartsWith(System.String,System.Char,System.StringComparison)">
+            <summary>
+            Adds a char to beginning of given string if it does not starts with the char.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.IsNullOrEmpty(System.String)">
+            <summary>
+            Indicates whether this string is null or an System.String.Empty string.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.IsNullOrWhiteSpace(System.String)">
+            <summary>
+            indicates whether this string is null, empty, or consists only of white-space characters.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.Left(System.String,System.Int32)">
+            <summary>
+            Gets a substring of a string from beginning of the string.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="str"/> is null</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="len"/> is bigger that string's length</exception>
+        </member>
+        <member name="M:System.AbpStringExtensions.NormalizeLineEndings(System.String)">
+            <summary>
+            Converts line endings in the string to <see cref="P:System.Environment.NewLine"/>.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.NthIndexOf(System.String,System.Char,System.Int32)">
+            <summary>
+            Gets index of nth occurrence of a char in a string.
+            </summary>
+            <param name="str">source string to be searched</param>
+            <param name="c">Char to search in <paramref name="str"/></param>
+            <param name="n">Count of the occurrence</param>
+        </member>
+        <member name="M:System.AbpStringExtensions.RemovePostFix(System.String,System.String[])">
+            <summary>
+            Removes first occurrence of the given postfixes from end of the given string.
+            </summary>
+            <param name="str">The string.</param>
+            <param name="postFixes">one or more postfix.</param>
+            <returns>Modified string or the same string if it has not any of given postfixes</returns>
+        </member>
+        <member name="M:System.AbpStringExtensions.RemovePostFix(System.String,System.StringComparison,System.String[])">
+            <summary>
+            Removes first occurrence of the given postfixes from end of the given string.
+            </summary>
+            <param name="str">The string.</param>
+            <param name="comparisonType">String comparison type</param>
+            <param name="postFixes">one or more postfix.</param>
+            <returns>Modified string or the same string if it has not any of given postfixes</returns>
+        </member>
+        <member name="M:System.AbpStringExtensions.RemovePreFix(System.String,System.String[])">
+            <summary>
+            Removes first occurrence of the given prefixes from beginning of the given string.
+            </summary>
+            <param name="str">The string.</param>
+            <param name="preFixes">one or more prefix.</param>
+            <returns>Modified string or the same string if it has not any of given prefixes</returns>
+        </member>
+        <member name="M:System.AbpStringExtensions.RemovePreFix(System.String,System.StringComparison,System.String[])">
+            <summary>
+            Removes first occurrence of the given prefixes from beginning of the given string.
+            </summary>
+            <param name="str">The string.</param>
+            <param name="comparisonType">String comparison type</param>
+            <param name="preFixes">one or more prefix.</param>
+            <returns>Modified string or the same string if it has not any of given prefixes</returns>
+        </member>
+        <member name="M:System.AbpStringExtensions.Right(System.String,System.Int32)">
+            <summary>
+            Gets a substring of a string from end of the string.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="str"/> is null</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="len"/> is bigger that string's length</exception>
+        </member>
+        <member name="M:System.AbpStringExtensions.Split(System.String,System.String)">
+            <summary>
+            Uses string.Split method to split given string by given separator.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.Split(System.String,System.String,System.StringSplitOptions)">
+            <summary>
+            Uses string.Split method to split given string by given separator.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.SplitToLines(System.String)">
+            <summary>
+            Uses string.Split method to split given string by <see cref="P:System.Environment.NewLine"/>.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.SplitToLines(System.String,System.StringSplitOptions)">
+            <summary>
+            Uses string.Split method to split given string by <see cref="P:System.Environment.NewLine"/>.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.ToCamelCase(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Converts PascalCase string to camelCase string.
+            </summary>
+            <param name="str">String to convert</param>
+            <param name="useCurrentCulture">set true to use current culture. Otherwise, invariant culture will be used.</param>
+            <param name="handleAbbreviations">set true to if you want to convert 'XYZ' to 'xyz'.</param>
+            <returns>camelCase of the string</returns>
+        </member>
+        <member name="M:System.AbpStringExtensions.ToSentenceCase(System.String,System.Boolean)">
+            <summary>
+            Converts given PascalCase/camelCase string to sentence (by splitting words by space).
+            Example: "ThisIsSampleSentence" is converted to "This is a sample sentence".
+            </summary>
+            <param name="str">String to convert.</param>
+            <param name="useCurrentCulture">set true to use current culture. Otherwise, invariant culture will be used.</param>
+        </member>
+        <member name="M:System.AbpStringExtensions.ToKebabCase(System.String,System.Boolean)">
+            <summary>
+            Converts given PascalCase/camelCase string to kebab-case.
+            </summary>
+            <param name="str">String to convert.</param>
+            <param name="useCurrentCulture">set true to use current culture. Otherwise, invariant culture will be used.</param>
+        </member>
+        <member name="M:System.AbpStringExtensions.ToSnakeCase(System.String)">
+            <summary>
+            Converts given PascalCase/camelCase string to snake case.
+            Example: "ThisIsSampleSentence" is converted to "this_is_a_sample_sentence".
+            https://github.com/npgsql/npgsql/blob/dev/src/Npgsql/NameTranslation/NpgsqlSnakeCaseNameTranslator.cs#L51
+            </summary>
+            <param name="str">String to convert.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.AbpStringExtensions.ToEnum``1(System.String)">
+            <summary>
+            Converts string to enum value.
+            </summary>
+            <typeparam name="T">Type of enum</typeparam>
+            <param name="value">String value to convert</param>
+            <returns>Returns enum object</returns>
+        </member>
+        <member name="M:System.AbpStringExtensions.ToEnum``1(System.String,System.Boolean)">
+            <summary>
+            Converts string to enum value.
+            </summary>
+            <typeparam name="T">Type of enum</typeparam>
+            <param name="value">String value to convert</param>
+            <param name="ignoreCase">Ignore case</param>
+            <returns>Returns enum object</returns>
+        </member>
+        <member name="M:System.AbpStringExtensions.ToPascalCase(System.String,System.Boolean)">
+            <summary>
+            Converts camelCase string to PascalCase string.
+            </summary>
+            <param name="str">String to convert</param>
+            <param name="useCurrentCulture">set true to use current culture. Otherwise, invariant culture will be used.</param>
+            <returns>PascalCase of the string</returns>
+        </member>
+        <member name="M:System.AbpStringExtensions.Truncate(System.String,System.Int32)">
+            <summary>
+            Gets a substring of a string from beginning of the string if it exceeds maximum length.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="str"/> is null</exception>
+        </member>
+        <member name="M:System.AbpStringExtensions.TruncateFromBeginning(System.String,System.Int32)">
+            <summary>
+            Gets a substring of a string from Ending of the string if it exceeds maximum length.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="str"/> is null</exception>
+        </member>
+        <member name="M:System.AbpStringExtensions.TruncateWithPostfix(System.String,System.Int32)">
+            <summary>
+            Gets a substring of a string from beginning of the string if it exceeds maximum length.
+            It adds a "..." postfix to end of the string if it's truncated.
+            Returning string can not be longer than maxLength.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="str"/> is null</exception>
+        </member>
+        <member name="M:System.AbpStringExtensions.TruncateWithPostfix(System.String,System.Int32,System.String)">
+            <summary>
+            Gets a substring of a string from beginning of the string if it exceeds maximum length.
+            It adds given <paramref name="postfix"/> to end of the string if it's truncated.
+            Returning string can not be longer than maxLength.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="str"/> is null</exception>
+        </member>
+        <member name="M:System.AbpStringExtensions.GetBytes(System.String)">
+            <summary>
+            Converts given string to a byte array using <see cref="P:System.Text.Encoding.UTF8"/> encoding.
+            </summary>
+        </member>
+        <member name="M:System.AbpStringExtensions.GetBytes(System.String,System.Text.Encoding)">
+            <summary>
+            Converts given string to a byte array using the given <paramref name="encoding"/>
+            </summary>
+        </member>
+        <member name="M:System.AbpTypeExtensions.IsAssignableTo``1(System.Type)">
+             <summary>
+             Determines whether an instance of this type can be assigned to
+             an instance of the <typeparamref name="TTarget"></typeparamref>.
+            
+             Internally uses <see cref="M:System.Type.IsAssignableFrom(System.Type)"/>.
+             </summary>
+             <typeparam name="TTarget">Target type</typeparam> (as reverse).
+        </member>
+        <member name="M:System.AbpTypeExtensions.IsAssignableTo(System.Type,System.Type)">
+             <summary>
+             Determines whether an instance of this type can be assigned to
+             an instance of the <paramref name="targetType"></paramref>.
+            
+             Internally uses <see cref="M:System.Type.IsAssignableFrom(System.Type)"/> (as reverse).
+             </summary>
+             <param name="type">this type</param>
+             <param name="targetType">Target type</param>
+        </member>
+        <member name="M:System.AbpTypeExtensions.GetBaseClasses(System.Type,System.Boolean)">
+            <summary>
+            Gets all base classes of this type.
+            </summary>
+            <param name="type">The type to get its base classes.</param>
+            <param name="includeObject">True, to include the standard <see cref="T:System.Object"/> type in the returned array.</param>
+        </member>
+        <member name="M:System.AbpTypeExtensions.GetBaseClasses(System.Type,System.Type,System.Boolean)">
+            <summary>
+            Gets all base classes of this type.
+            </summary>
+            <param name="type">The type to get its base classes.</param>
+            <param name="stoppingType">A type to stop going to the deeper base classes. This type will be be included in the returned array</param>
+            <param name="includeObject">True, to include the standard <see cref="T:System.Object"/> type in the returned array.</param>
+        </member>
+        <member name="T:System.Collections.Generic.AbpCollectionExtensions">
+            <summary>
+            Extension methods for Collections.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.AbpCollectionExtensions.IsNullOrEmpty``1(System.Collections.Generic.ICollection{``0})">
+            <summary>
+            Checks whatever given collection object is null or has no item.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.AbpCollectionExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},``0)">
+            <summary>
+            Adds an item to the collection if it's not already in the collection.
+            </summary>
+            <param name="source">The collection</param>
+            <param name="item">Item to check and add</param>
+            <typeparam name="T">Type of the items in the collection</typeparam>
+            <returns>Returns True if added, returns False if not.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpCollectionExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Adds items to the collection which are not already in the collection.
+            </summary>
+            <param name="source">The collection</param>
+            <param name="items">Item to check and add</param>
+            <typeparam name="T">Type of the items in the collection</typeparam>
+            <returns>Returns the added items.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpCollectionExtensions.AddIfNotContains``1(System.Collections.Generic.ICollection{``0},System.Func{``0,System.Boolean},System.Func{``0})">
+            <summary>
+            Adds an item to the collection if it's not already in the collection based on the given <paramref name="predicate"/>.
+            </summary>
+            <param name="source">The collection</param>
+            <param name="predicate">The condition to decide if the item is already in the collection</param>
+            <param name="itemFactory">A factory that returns the item</param>
+            <typeparam name="T">Type of the items in the collection</typeparam>
+            <returns>Returns True if added, returns False if not.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpCollectionExtensions.RemoveAll``1(System.Collections.Generic.ICollection{``0},System.Func{``0,System.Boolean})">
+            <summary>
+            Removes all items from the collection those satisfy the given <paramref name="predicate"/>.
+            </summary>
+            <typeparam name="T">Type of the items in the collection</typeparam>
+            <param name="source">The collection</param>
+            <param name="predicate">The condition to remove the items</param>
+            <returns>List of removed items</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpCollectionExtensions.RemoveAll``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Removes all items from the collection.
+            </summary>
+            <typeparam name="T">Type of the items in the collection</typeparam>
+            <param name="source">The collection</param>
+            <param name="items">Items to be removed from the list</param>
+        </member>
+        <member name="T:System.Collections.Generic.AbpDictionaryExtensions">
+            <summary>
+            Extension methods for Dictionary.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.AbpDictionaryExtensions.TryGetValue``1(System.Collections.Generic.IDictionary{System.String,System.Object},System.String,``0@)">
+            <summary>
+            This method is used to try to get a value in a dictionary if it does exists.
+            </summary>
+            <typeparam name="T">Type of the value</typeparam>
+            <param name="dictionary">The collection object</param>
+            <param name="key">Key</param>
+            <param name="value">Value of the key (or default value if key not exists)</param>
+            <returns>True if key does exists in the dictionary</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpDictionaryExtensions.GetOrDefault``2(System.Collections.Generic.Dictionary{``0,``1},``0)">
+            <summary>
+            Gets a value from the dictionary with given key. Returns default value if can not find.
+            </summary>
+            <param name="dictionary">Dictionary to check and get</param>
+            <param name="key">Key to find the value</param>
+            <typeparam name="TKey">Type of the key</typeparam>
+            <typeparam name="TValue">Type of the value</typeparam>
+            <returns>Value if found, default if can not found.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpDictionaryExtensions.GetOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0)">
+            <summary>
+            Gets a value from the dictionary with given key. Returns default value if can not find.
+            </summary>
+            <param name="dictionary">Dictionary to check and get</param>
+            <param name="key">Key to find the value</param>
+            <typeparam name="TKey">Type of the key</typeparam>
+            <typeparam name="TValue">Type of the value</typeparam>
+            <returns>Value if found, default if can not found.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpDictionaryExtensions.GetOrDefault``2(System.Collections.Generic.IReadOnlyDictionary{``0,``1},``0)">
+            <summary>
+            Gets a value from the dictionary with given key. Returns default value if can not find.
+            </summary>
+            <param name="dictionary">Dictionary to check and get</param>
+            <param name="key">Key to find the value</param>
+            <typeparam name="TKey">Type of the key</typeparam>
+            <typeparam name="TValue">Type of the value</typeparam>
+            <returns>Value if found, default if can not found.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpDictionaryExtensions.GetOrDefault``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0)">
+            <summary>
+            Gets a value from the dictionary with given key. Returns default value if can not find.
+            </summary>
+            <param name="dictionary">Dictionary to check and get</param>
+            <param name="key">Key to find the value</param>
+            <typeparam name="TKey">Type of the key</typeparam>
+            <typeparam name="TValue">Type of the value</typeparam>
+            <returns>Value if found, default if can not found.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpDictionaryExtensions.GetOrAdd``2(System.Collections.Generic.IDictionary{``0,``1},``0,System.Func{``0,``1})">
+            <summary>
+            Gets a value from the dictionary with given key. Returns default value if can not find.
+            </summary>
+            <param name="dictionary">Dictionary to check and get</param>
+            <param name="key">Key to find the value</param>
+            <param name="factory">A factory method used to create the value if not found in the dictionary</param>
+            <typeparam name="TKey">Type of the key</typeparam>
+            <typeparam name="TValue">Type of the value</typeparam>
+            <returns>Value if found, default if can not found.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpDictionaryExtensions.GetOrAdd``2(System.Collections.Generic.IDictionary{``0,``1},``0,System.Func{``1})">
+            <summary>
+            Gets a value from the dictionary with given key. Returns default value if can not find.
+            </summary>
+            <param name="dictionary">Dictionary to check and get</param>
+            <param name="key">Key to find the value</param>
+            <param name="factory">A factory method used to create the value if not found in the dictionary</param>
+            <typeparam name="TKey">Type of the key</typeparam>
+            <typeparam name="TValue">Type of the value</typeparam>
+            <returns>Value if found, default if can not found.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpDictionaryExtensions.GetOrAdd``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0,System.Func{``1})">
+            <summary>
+            Gets a value from the concurrent dictionary with given key. Returns default value if can not find.
+            </summary>
+            <param name="dictionary">Concurrent dictionary to check and get</param>
+            <param name="key">Key to find the value</param>
+            <param name="factory">A factory method used to create the value if not found in the dictionary</param>
+            <typeparam name="TKey">Type of the key</typeparam>
+            <typeparam name="TValue">Type of the value</typeparam>
+            <returns>Value if found, default if can not found.</returns>
+        </member>
+        <member name="T:System.Collections.Generic.AbpEnumerableExtensions">
+            <summary> 
+            Extension methods for <see cref="T:System.Collections.Generic.IEnumerable`1"/>.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.AbpEnumerableExtensions.JoinAsString(System.Collections.Generic.IEnumerable{System.String},System.String)">
+            <summary>
+            Concatenates the members of a constructed <see cref="T:System.Collections.Generic.IEnumerable`1"/> collection of type System.String, using the specified separator between each member.
+            This is a shortcut for string.Join(...)
+            </summary>
+            <param name="source">A collection that contains the strings to concatenate.</param>
+            <param name="separator">The string to use as a separator. separator is included in the returned string only if values has more than one element.</param>
+            <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns System.String.Empty.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpEnumerableExtensions.JoinAsString``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Concatenates the members of a collection, using the specified separator between each member.
+            This is a shortcut for string.Join(...)
+            </summary>
+            <param name="source">A collection that contains the objects to concatenate.</param>
+            <param name="separator">The string to use as a separator. separator is included in the returned string only if values has more than one element.</param>
+            <typeparam name="T">The type of the members of values.</typeparam>
+            <returns>A string that consists of the members of values delimited by the separator string. If values has no members, the method returns System.String.Empty.</returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpEnumerableExtensions.WhereIf``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Func{``0,System.Boolean})">
+            <summary>
+            Filters a <see cref="T:System.Collections.Generic.IEnumerable`1"/> by given predicate if given condition is true.
+            </summary>
+            <param name="source">Enumerable to apply filtering</param>
+            <param name="condition">A boolean value</param>
+            <param name="predicate">Predicate to filter the enumerable</param>
+            <returns>Filtered or not filtered enumerable based on <paramref name="condition"/></returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpEnumerableExtensions.WhereIf``1(System.Collections.Generic.IEnumerable{``0},System.Boolean,System.Func{``0,System.Int32,System.Boolean})">
+            <summary>
+            Filters a <see cref="T:System.Collections.Generic.IEnumerable`1"/> by given predicate if given condition is true.
+            </summary>
+            <param name="source">Enumerable to apply filtering</param>
+            <param name="condition">A boolean value</param>
+            <param name="predicate">Predicate to filter the enumerable</param>
+            <returns>Filtered or not filtered enumerable based on <paramref name="condition"/></returns>
+        </member>
+        <member name="T:System.Collections.Generic.AbpListExtensions">
+            <summary>
+            Extension methods for <see cref="T:System.Collections.Generic.IList`1"/>.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.AbpListExtensions.SortByDependencies``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Collections.Generic.IEnumerable{``0}},System.Collections.Generic.IEqualityComparer{``0})">
+            <summary>
+            Sort a list by a topological sorting, which consider their dependencies.
+            </summary>
+            <typeparam name="T">The type of the members of values.</typeparam>
+            <param name="source">A list of objects to sort</param>
+            <param name="getDependencies">Function to resolve the dependencies</param>
+            <param name="comparer">Equality comparer for dependencies </param>
+            <returns>
+            Returns a new list ordered by dependencies.
+            If A depends on B, then B will come before than A in the resulting list.
+            </returns>
+        </member>
+        <member name="M:System.Collections.Generic.AbpListExtensions.SortByDependenciesVisit``1(``0,System.Func{``0,System.Collections.Generic.IEnumerable{``0}},System.Collections.Generic.List{``0},System.Collections.Generic.Dictionary{``0,System.Boolean})">
+             <summary>
+            
+             </summary>
+             <typeparam name="T">The type of the members of values.</typeparam>
+             <param name="item">Item to resolve</param>
+             <param name="getDependencies">Function to resolve the dependencies</param>
+             <param name="sorted">List with the sortet items</param>
+             <param name="visited">Dictionary with the visited items</param>
+        </member>
+        <member name="T:System.Linq.AbpQueryableExtensions">
+            <summary>
+            Some useful extension methods for <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+        </member>
+        <member name="M:System.Linq.AbpQueryableExtensions.PageBy``1(System.Linq.IQueryable{``0},System.Int32,System.Int32)">
+            <summary>
+            Used for paging. Can be used as an alternative to Skip(...).Take(...) chaining.
+            </summary>
+        </member>
+        <member name="M:System.Linq.AbpQueryableExtensions.PageBy``2(``1,System.Int32,System.Int32)">
+            <summary>
+            Used for paging. Can be used as an alternative to Skip(...).Take(...) chaining.
+            </summary>
+        </member>
+        <member name="M:System.Linq.AbpQueryableExtensions.WhereIf``1(System.Linq.IQueryable{``0},System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Filters a <see cref="T:System.Linq.IQueryable`1"/> by given predicate if given condition is true.
+            </summary>
+            <param name="query">Queryable to apply filtering</param>
+            <param name="condition">A boolean value</param>
+            <param name="predicate">Predicate to filter the query</param>
+            <returns>Filtered or not filtered query based on <paramref name="condition"/></returns>
+        </member>
+        <member name="M:System.Linq.AbpQueryableExtensions.WhereIf``2(``1,System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Filters a <see cref="T:System.Linq.IQueryable`1"/> by given predicate if given condition is true.
+            </summary>
+            <param name="query">Queryable to apply filtering</param>
+            <param name="condition">A boolean value</param>
+            <param name="predicate">Predicate to filter the query</param>
+            <returns>Filtered or not filtered query based on <paramref name="condition"/></returns>
+        </member>
+        <member name="M:System.Linq.AbpQueryableExtensions.WhereIf``1(System.Linq.IQueryable{``0},System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Int32,System.Boolean}})">
+            <summary>
+            Filters a <see cref="T:System.Linq.IQueryable`1"/> by given predicate if given condition is true.
+            </summary>
+            <param name="query">Queryable to apply filtering</param>
+            <param name="condition">A boolean value</param>
+            <param name="predicate">Predicate to filter the query</param>
+            <returns>Filtered or not filtered query based on <paramref name="condition"/></returns>
+        </member>
+        <member name="M:System.Linq.AbpQueryableExtensions.WhereIf``2(``1,System.Boolean,System.Linq.Expressions.Expression{System.Func{``0,System.Int32,System.Boolean}})">
+            <summary>
+            Filters a <see cref="T:System.Linq.IQueryable`1"/> by given predicate if given condition is true.
+            </summary>
+            <param name="query">Queryable to apply filtering</param>
+            <param name="condition">A boolean value</param>
+            <param name="predicate">Predicate to filter the query</param>
+            <returns>Filtered or not filtered query based on <paramref name="condition"/></returns>
+        </member>
+        <member name="T:System.Linq.PredicateOperator">
+            <summary> The Predicate Operator </summary>
+        </member>
+        <member name="F:System.Linq.PredicateOperator.Or">
+            <summary> The "Or" </summary>
+        </member>
+        <member name="F:System.Linq.PredicateOperator.And">
+            <summary> The "And" </summary>
+        </member>
+        <member name="T:System.Linq.PredicateBuilder">
+            <summary>
+            See http://www.albahari.com/expressions for information and examples.
+            </summary>
+        </member>
+        <member name="M:System.Linq.PredicateBuilder.New``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary> Start an expression </summary>
+        </member>
+        <member name="M:System.Linq.PredicateBuilder.New``1(System.Boolean)">
+            <summary> Create an expression with a stub expression true or false to use when the expression is not yet started. </summary>
+        </member>
+        <member name="M:System.Linq.PredicateBuilder.Or``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary> OR </summary>
+        </member>
+        <member name="M:System.Linq.PredicateBuilder.And``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary> AND </summary>
+        </member>
+        <member name="M:System.Linq.PredicateBuilder.Extend``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.PredicateOperator)">
+            <summary>
+            Extends the specified source Predicate with another Predicate and the specified PredicateOperator.
+            </summary>
+            <typeparam name="T">The type</typeparam>
+            <param name="first">The source Predicate.</param>
+            <param name="second">The second Predicate.</param>
+            <param name="operator">The Operator (can be "And" or "Or").</param>
+            <returns>Expression{Func{T, bool}}</returns>
+        </member>
+        <member name="M:System.Linq.PredicateBuilder.Extend``1(System.Linq.ExpressionStarter{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Linq.PredicateOperator)">
+            <summary>
+            Extends the specified source Predicate with another Predicate and the specified PredicateOperator.
+            </summary>
+            <typeparam name="T">The type</typeparam>
+            <param name="first">The source Predicate.</param>
+            <param name="second">The second Predicate.</param>
+            <param name="operator">The Operator (can be "And" or "Or").</param>
+            <returns>Expression{Func{T, bool}}</returns>
+        </member>
+        <member name="T:System.Linq.ExpressionStarter`1">
+            <summary>
+            ExpressionStarter{T} which eliminates the default 1=0 or 1=1 stub expressions
+            </summary>
+            <typeparam name="T">The type</typeparam>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.Predicate">
+            <summary>The actual Predicate. It can only be set by calling Start.</summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.IsStarted">
+            <summary>Determines if the predicate is started.</summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.UseDefaultExpression">
+            <summary> A default expression to use only when the expression is null </summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.DefaultExpression">
+            <summary>The default expression</summary>
+        </member>
+        <member name="M:System.Linq.ExpressionStarter`1.Start(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>Set the Expression predicate</summary>
+            <param name="exp">The first expression</param>
+        </member>
+        <member name="M:System.Linq.ExpressionStarter`1.Or(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>Or</summary>
+        </member>
+        <member name="M:System.Linq.ExpressionStarter`1.And(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>And</summary>
+        </member>
+        <member name="M:System.Linq.ExpressionStarter`1.ToString">
+            <summary> Show predicate string </summary>
+        </member>
+        <member name="M:System.Linq.ExpressionStarter`1.op_Implicit(System.Linq.ExpressionStarter{`0})~System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}">
+            <summary>
+            Allows this object to be implicitely converted to an Expression{Func{T, bool}}.
+            </summary>
+            <param name="right"></param>
+        </member>
+        <member name="M:System.Linq.ExpressionStarter`1.op_Implicit(System.Linq.ExpressionStarter{`0})~System.Func{`0,System.Boolean}">
+            <summary>
+            Allows this object to be implicitely converted to an Expression{Func{T, bool}}.
+            </summary>
+            <param name="right"></param>
+        </member>
+        <member name="M:System.Linq.ExpressionStarter`1.op_Implicit(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})~System.Linq.ExpressionStarter{`0}">
+            <summary>
+            Allows this object to be implicitely converted to an Expression{Func{T, bool}}.
+            </summary>
+            <param name="right"></param>
+        </member>
+        <member name="M:System.Linq.ExpressionStarter`1.Compile">
+            <summary></summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.Body">
+            <summary></summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.NodeType">
+            <summary></summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.Parameters">
+            <summary></summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.Type">
+            <summary></summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.Name">
+            <summary></summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.ReturnType">
+            <summary></summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.TailCall">
+            <summary></summary>
+        </member>
+        <member name="P:System.Linq.ExpressionStarter`1.CanReduce">
+            <summary></summary>
+        </member>
+        <member name="T:System.Reflection.AbpMemberInfoExtensions">
+            <summary>
+            Extensions to <see cref="T:System.Reflection.MemberInfo"/>.
+            </summary>
+        </member>
+        <member name="M:System.Reflection.AbpMemberInfoExtensions.GetSingleAttributeOrNull``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            Gets a single attribute for a member.
+            </summary>
+            <typeparam name="TAttribute">Type of the attribute</typeparam>
+            <param name="memberInfo">The member that will be checked for the attribute</param>
+            <param name="inherit">Include inherited attributes</param>
+            <returns>Returns the attribute object if found. Returns null if not found.</returns>
+        </member>
+        <member name="P:Volo.Abp.AbpApplicationCreationOptions.Configuration">
+            <summary>
+            The options in this property only take effect when IConfiguration not registered.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.AbpException">
+            <summary>
+            Base exception type for those are thrown by Abp system for Abp specific exceptions.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.BusinessException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor for serializing.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Collections.ITypeList">
+            <summary>
+            A shortcut for <see cref="T:Volo.Abp.Collections.ITypeList`1"/> to use object as base type.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Collections.ITypeList`1">
+            <summary>
+            Extends <see cref="T:System.Collections.Generic.IList`1"/> to add restriction a specific base type.
+            </summary>
+            <typeparam name="TBaseType">Base Type of <see cref="T:System.Type"/>s in this list</typeparam>
+        </member>
+        <member name="M:Volo.Abp.Collections.ITypeList`1.Add``1">
+            <summary>
+            Adds a type to list.
+            </summary>
+            <typeparam name="T">Type</typeparam>
+        </member>
+        <member name="M:Volo.Abp.Collections.ITypeList`1.TryAdd``1">
+            <summary>
+            Adds a type to list if it's not already in the list.
+            </summary>
+            <typeparam name="T">Type</typeparam>
+        </member>
+        <member name="M:Volo.Abp.Collections.ITypeList`1.Contains``1">
+            <summary>
+            Checks if a type exists in the list.
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Volo.Abp.Collections.ITypeList`1.Remove``1">
+            <summary>
+            Removes a type from list
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Volo.Abp.Collections.TypeList">
+            <summary>
+            A shortcut for <see cref="T:Volo.Abp.Collections.TypeList`1"/> to use object as base type.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Collections.TypeList`1">
+            <summary>
+            Extends <see cref="T:System.Collections.Generic.List`1"/> to add restriction a specific base type.
+            </summary>
+            <typeparam name="TBaseType">Base Type of <see cref="T:System.Type"/>s in this list</typeparam>
+        </member>
+        <member name="P:Volo.Abp.Collections.TypeList`1.Count">
+            <summary>
+            Gets the count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="P:Volo.Abp.Collections.TypeList`1.IsReadOnly">
+            <summary>
+            Gets a value indicating whether this instance is read only.
+            </summary>
+            <value><c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Volo.Abp.Collections.TypeList`1.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:System.Type"/> at the specified index.
+            </summary>
+            <param name="index">Index.</param>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.#ctor">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.Collections.TypeList`1"/> object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.Add``1">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.Add(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.Insert(System.Int32,System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.IndexOf(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.Contains``1">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.Contains(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.Remove``1">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.Remove(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.RemoveAt(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.Clear">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.CopyTo(System.Type[],System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Volo.Abp.Collections.TypeList`1.GetEnumerator">
+            <inheritdoc/>
+        </member>
+        <member name="T:Volo.Abp.DependencyInjection.ICachedServiceProvider">
+            <summary>
+            Provides services by caching the resolved services.
+            It caches all type of services including transients.
+            This service's lifetime is scoped and it should be used
+            for a limited scope.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.DisposeAction">
+            <summary>
+            This class can be used to provide an action when
+            Dipose method is called.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.DisposeAction.#ctor(System.Action)">
+            <summary>
+            Creates a new <see cref="T:Volo.Abp.DisposeAction"/> object.
+            </summary>
+            <param name="action">Action to be executed when this object is disposed.</param>
+        </member>
+        <member name="T:Volo.Abp.DynamicProxy.DynamicProxyIgnoreTypes">
+            <summary>
+            Castle's dynamic proxy class feature will have performance issues for some components, such as the controller of Asp net core MVC.
+            For related discussions, see: https://github.com/castleproject/Core/issues/486 https://github.com/abpframework/abp/issues/3180
+            The Abp framework may enable interceptors for certain components (UOW, Auditing, Authorization, etc.), which requires dynamic proxy classes, but will cause application performance to decline.
+            We need to use other methods for the controller to implement interception, such as middleware or MVC / Page filters.
+            So we provide some ignored types to avoid enabling dynamic proxy classes.
+            By default it is empty. When you use middleware or filters for these components in your application, you can add these types to the list.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.DynamicProxy.ProxyHelper.UnProxy(System.Object)">
+            <summary>
+            Returns dynamic proxy target object if this is a proxied object, otherwise returns the given object. 
+            It supports Castle Dynamic Proxies.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ExceptionHandling.ExceptionNotificationContext.Exception">
+            <summary>
+            The exception object.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.ExceptionHandling.ExceptionNotificationContext.Handled">
+            <summary>
+            True, if it is handled.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.IAbpApplication.StartupModuleType">
+            <summary>
+            Type of the startup (entrance) module of the application.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.IAbpApplication.Services">
+            <summary>
+            List of services registered to this application.
+            Can not add new services to this collection after application initialize.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.IAbpApplication.ServiceProvider">
+            <summary>
+            Reference to the root service provider used by the application.
+            This can not be used before initialize the application.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.IAbpApplication.Shutdown">
+            <summary>
+            Used to gracefully shutdown the application and all modules.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.IAbpApplicationWithExternalServiceProvider.SetServiceProvider(System.IServiceProvider)">
+            <summary>
+            Sets the service provider, but not initializes the modules.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.IAbpApplicationWithExternalServiceProvider.Initialize(System.IServiceProvider)">
+            <summary>
+            Sets the service provider and initializes all the modules.
+            If <see cref="M:Volo.Abp.IAbpApplicationWithExternalServiceProvider.SetServiceProvider(System.IServiceProvider)"/> was called before, the same
+            <see cref="!:serviceProvider"/> instance should be passed to this method.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.IAbpApplicationWithInternalServiceProvider.CreateServiceProvider">
+            <summary>
+            Creates the service provider, but not initializes the modules.
+            Multiple calls returns the same service provider without creating again.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.IAbpApplicationWithInternalServiceProvider.Initialize">
+            <summary>
+            Creates the service provider and initializes all the modules.
+            If <see cref="M:Volo.Abp.IAbpApplicationWithInternalServiceProvider.CreateServiceProvider"/> method was called before,
+            it does not re-create it, but uses the previous one.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.IAsyncInitialize">
+            <summary>
+            IMPORTANT: THIS IS AN INTERNAL CLASS TO BE USED BY THE ABP FRAMEWORK.
+            IT WILL BE REMOVED IN THE FUTURE VERSIONS. DON'T USE IT!
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.IO.DirectoryHelper">
+            <summary>
+            A helper class for Directory operations.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.IO.FileHelper">
+            <summary>
+            A helper class for File operations.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.IO.FileHelper.DeleteIfExists(System.String)">
+            <summary>
+            Checks and deletes given file if it does exists.
+            </summary>
+            <param name="filePath">Path of the file</param>
+        </member>
+        <member name="M:Volo.Abp.IO.FileHelper.GetExtension(System.String)">
+            <summary>
+            Gets extension of a file.
+            </summary>
+            <param name="fileNameWithExtension"></param>
+            <returns>
+            Returns extension without dot.
+            Returns null if given <paramref name="fileNameWithExtension"></paramref> does not include dot.
+            </returns>
+        </member>
+        <member name="M:Volo.Abp.IO.FileHelper.ReadAllTextAsync(System.String)">
+            <summary>
+            Opens a text file, reads all lines of the file, and then closes the file.
+            </summary>
+            <param name="path">The file to open for reading.</param>
+            <returns>A string containing all lines of the file.</returns>
+        </member>
+        <member name="M:Volo.Abp.IO.FileHelper.ReadAllBytesAsync(System.String)">
+            <summary>
+            Opens a text file, reads all lines of the file, and then closes the file.
+            </summary>
+            <param name="path">The file to open for reading.</param>
+            <returns>A string containing all lines of the file.</returns>
+        </member>
+        <member name="M:Volo.Abp.IO.FileHelper.ReadAllLinesAsync(System.String,System.Text.Encoding,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32,System.IO.FileOptions)">
+            <summary>
+            Opens a text file, reads all lines of the file, and then closes the file.
+            </summary>
+            <param name="path">The file to open for reading.</param>
+            <param name="encoding">Encoding of the file. Default is UTF8</param>
+            <param name="fileMode">Specifies how the operating system should open a file. Default is Open</param>
+            <param name="fileAccess">Defines constants for read, write, or read/write access to a file. Default is Read</param>
+            <param name="fileShare">Contains constants for controlling the kind of access other FileStream objects can have to the same file. Default is Read</param>
+            <param name="bufferSize">Length of StreamReader buffer. Default is 4096.</param>
+            <param name="fileOptions">Indicates FileStream options. Default is Asynchronous (The file is to be used for asynchronous reading.) and SequentialScan (The file is to be accessed sequentially from beginning to end.) </param>
+            <returns>A string containing all lines of the file.</returns>
+        </member>
+        <member name="M:Volo.Abp.IO.FileHelper.ReadFileWithoutBomAsync(System.String)">
+            <summary>
+            Opens a text file, reads content without BOM
+            </summary>
+            <param name="path">The file to open for reading.</param>
+            <returns>A string containing all lines of the file.</returns>
+        </member>
+        <member name="T:Volo.Abp.Logging.IHasLogLevel">
+            <summary>
+            Interface to define a <see cref="P:Volo.Abp.Logging.IHasLogLevel.LogLevel"/> property (see <see cref="P:Volo.Abp.Logging.IHasLogLevel.LogLevel"/>).
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Logging.IHasLogLevel.LogLevel">
+            <summary>
+            Log severity.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Modularity.DependsOnAttribute">
+            <summary>
+            Used to define dependencies of a type.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Modularity.ServiceConfigurationContext.Item(System.String)">
+             <summary>
+             Gets/sets arbitrary named objects those can be stored during
+             the service registration phase and shared between modules.
+            
+             This is a shortcut usage of the <see cref="P:Volo.Abp.Modularity.ServiceConfigurationContext.Items"/> dictionary.
+             Returns null if given key is not found in the <see cref="P:Volo.Abp.Modularity.ServiceConfigurationContext.Items"/> dictionary.
+             </summary>
+             <param name="key"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Volo.Abp.NamedTypeSelector">
+            <summary>
+            Used to represent a named type selector.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.NamedTypeSelector.Name">
+            <summary>
+            Name of the selector.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.NamedTypeSelector.Predicate">
+            <summary>
+            Predicate.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.NamedTypeSelector.#ctor(System.String,System.Func{System.Type,System.Boolean})">
+            <summary>
+            Creates new <see cref="T:Volo.Abp.NamedTypeSelector"/> object.
+            </summary>
+            <param name="name">Name</param>
+            <param name="predicate">Predicate</param>
+        </member>
+        <member name="M:Volo.Abp.NamedTypeSelectorListExtensions.Add(System.Collections.Generic.IList{Volo.Abp.NamedTypeSelector},System.String,System.Type[])">
+            <summary>
+            Add list of types to the list.
+            </summary>
+            <param name="list">List of NamedTypeSelector items</param>
+            <param name="name">An arbitrary but unique name (can be later used to remove types from the list)</param>
+            <param name="types"></param>
+        </member>
+        <member name="T:Volo.Abp.NameValue">
+            <summary>
+            Can be used to store Name/Value (or Key/Value) pairs.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.NameValue`1">
+            <summary>
+            Can be used to store Name/Value (or Key/Value) pairs.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.NameValue`1.Name">
+            <summary>
+            Name.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.NameValue`1.Value">
+            <summary>
+            Value.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.RandomHelper">
+            <summary>
+            A shortcut to use <see cref="T:System.Random"/> class.
+            Also provides some useful methods.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.RandomHelper.GetRandom(System.Int32,System.Int32)">
+            <summary>
+            Returns a random number within a specified range.
+            </summary>
+            <param name="minValue">The inclusive lower bound of the random number returned.</param>
+            <param name="maxValue">The exclusive upper bound of the random number returned. maxValue must be greater than or equal to minValue.</param>
+            <returns>
+            A 32-bit signed integer greater than or equal to minValue and less than maxValue; 
+            that is, the range of return values includes minValue but not maxValue. 
+            If minValue equals maxValue, minValue is returned.
+            </returns>
+        </member>
+        <member name="M:Volo.Abp.RandomHelper.GetRandom(System.Int32)">
+            <summary>
+            Returns a nonnegative random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">The exclusive upper bound of the random number to be generated. maxValue must be greater than or equal to zero.</param>
+            <returns>
+            A 32-bit signed integer greater than or equal to zero, and less than maxValue; 
+            that is, the range of return values ordinarily includes zero but not maxValue. 
+            However, if maxValue equals zero, maxValue is returned.
+            </returns>
+        </member>
+        <member name="M:Volo.Abp.RandomHelper.GetRandom">
+            <summary>
+            Returns a nonnegative random number.
+            </summary>
+            <returns>A 32-bit signed integer greater than or equal to zero and less than <see cref="F:System.Int32.MaxValue"/>.</returns>
+        </member>
+        <member name="M:Volo.Abp.RandomHelper.GetRandomOf``1(``0[])">
+            <summary>
+            Gets random of given objects.
+            </summary>
+            <typeparam name="T">Type of the objects</typeparam>
+            <param name="objs">List of object to select a random one</param>
+        </member>
+        <member name="M:Volo.Abp.RandomHelper.GetRandomOfList``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Gets random item from the given list.
+            </summary>
+            <typeparam name="T">Type of the objects</typeparam>
+            <param name="list">List of object to select a random one</param>
+        </member>
+        <member name="M:Volo.Abp.RandomHelper.GenerateRandomizedList``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Generates a randomized list from given enumerable.
+            </summary>
+            <typeparam name="T">Type of items in the list</typeparam>
+            <param name="items">items</param>
+        </member>
+        <member name="T:Volo.Abp.Reflection.IAssemblyFinder">
+            <summary>
+            Used to get assemblies in the application.
+            It may not return all assemblies, but those are related with modules.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Reflection.ITypeFinder">
+            <summary>
+            Used to get types in the application.
+            It may not return all types, but those are related with modules.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Reflection.ReflectionHelper.IsAssignableToGenericType(System.Type,System.Type)">
+            <summary>
+            Checks whether <paramref name="givenType"/> implements/inherits <paramref name="genericType"/>.
+            </summary>
+            <param name="givenType">Type to check</param>
+            <param name="genericType">Generic type</param>
+        </member>
+        <member name="M:Volo.Abp.Reflection.ReflectionHelper.GetSingleAttributeOrDefault``1(System.Reflection.MemberInfo,``0,System.Boolean)">
+            <summary>
+            Tries to gets an of attribute defined for a class member and it's declaring type including inherited attributes.
+            Returns default value if it's not declared at all.
+            </summary>
+            <typeparam name="TAttribute">Type of the attribute</typeparam>
+            <param name="memberInfo">MemberInfo</param>
+            <param name="defaultValue">Default value (null as default)</param>
+            <param name="inherit">Inherit attribute from base classes</param>
+        </member>
+        <member name="M:Volo.Abp.Reflection.ReflectionHelper.GetSingleAttributeOfMemberOrDeclaringTypeOrDefault``1(System.Reflection.MemberInfo,``0,System.Boolean)">
+            <summary>
+            Tries to gets an of attribute defined for a class member and it's declaring type including inherited attributes.
+            Returns default value if it's not declared at all.
+            </summary>
+            <typeparam name="TAttribute">Type of the attribute</typeparam>
+            <param name="memberInfo">MemberInfo</param>
+            <param name="defaultValue">Default value (null as default)</param>
+            <param name="inherit">Inherit attribute from base classes</param>
+        </member>
+        <member name="M:Volo.Abp.Reflection.ReflectionHelper.GetAttributesOfMemberOrDeclaringType``1(System.Reflection.MemberInfo,System.Boolean)">
+            <summary>
+            Tries to gets attributes defined for a class member and it's declaring type including inherited attributes.
+            </summary>
+            <typeparam name="TAttribute">Type of the attribute</typeparam>
+            <param name="memberInfo">MemberInfo</param>
+            <param name="inherit">Inherit attribute from base classes</param>
+        </member>
+        <member name="M:Volo.Abp.Reflection.ReflectionHelper.GetValueByPath(System.Object,System.Type,System.String)">
+            <summary>
+            Gets value of a property by it's full path from given object
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Reflection.ReflectionHelper.SetValueByPath(System.Object,System.Type,System.String,System.Object)">
+            <summary>
+            Sets value of a property by it's full path on given object
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Reflection.ReflectionHelper.GetPublicConstantsRecursively(System.Type)">
+            <summary>
+            Get all the constant values in the specified type (including the base type).
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Volo.Abp.RemoteServiceAttribute.IsEnabled">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.RemoteServiceAttribute.IsMetadataEnabled">
+            <summary>
+            Default: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.RemoteServiceAttribute.Name">
+            <summary>
+            Group name of the remote service.
+            Group names of all services of a module expected to be the same.
+            This name is also used to distinguish the service endpoint of this group.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Text.Formatting.FormattedStringValueExtracter">
+            <summary>
+            This class is used to extract dynamic values from a formatted string.
+            It works as reverse of <see cref="M:System.String.Format(System.String,System.Object)"/>
+            </summary>
+            <example>
+            Say that str is "My name is Neo." and format is "My name is {name}.".
+            Then Extract method gets "Neo" as "name".
+            </example>
+        </member>
+        <member name="M:Volo.Abp.Text.Formatting.FormattedStringValueExtracter.Extract(System.String,System.String,System.Boolean)">
+            <summary>
+            Extracts dynamic values from a formatted string.
+            </summary>
+            <param name="str">String including dynamic values</param>
+            <param name="format">Format of the string</param>
+            <param name="ignoreCase">True, to search case-insensitive.</param>
+        </member>
+        <member name="M:Volo.Abp.Text.Formatting.FormattedStringValueExtracter.IsMatch(System.String,System.String,System.String[]@,System.Boolean)">
+            <summary>
+            Checks if given <paramref name="str"/> fits to given <paramref name="format"/>.
+            Also gets extracted values.
+            </summary>
+            <param name="str">String including dynamic values</param>
+            <param name="format">Format of the string</param>
+            <param name="values">Array of extracted values if matched</param>
+            <param name="ignoreCase">True, to search case-insensitive</param>
+            <returns>True, if matched.</returns>
+        </member>
+        <member name="T:Volo.Abp.Text.Formatting.FormattedStringValueExtracter.ExtractionResult">
+            <summary>
+            Used as return value of <see cref="M:Volo.Abp.Text.Formatting.FormattedStringValueExtracter.Extract(System.String,System.String,System.Boolean)"/> method.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Text.Formatting.FormattedStringValueExtracter.ExtractionResult.IsMatch">
+            <summary>
+            Is fully matched.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Text.Formatting.FormattedStringValueExtracter.ExtractionResult.Matches">
+            <summary>
+            List of matched dynamic values.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Text.StringHelper.ConvertFromBytesWithoutBom(System.Byte[],System.Text.Encoding)">
+            <summary>
+            Converts a byte[] to string without BOM (byte order mark).
+            </summary>
+            <param name="bytes">The byte[] to be converted to string</param>
+            <param name="encoding">The encoding to get string. Default is UTF8</param>
+            <returns></returns>
+        </member>
+        <member name="T:Volo.Abp.Threading.AsyncHelper">
+            <summary>
+            Provides some helper methods to work with async methods.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Threading.AsyncHelper.IsAsync(System.Reflection.MethodInfo)">
+            <summary>
+            Checks if given method is an async method.
+            </summary>
+            <param name="method">A method to check</param>
+        </member>
+        <member name="M:Volo.Abp.Threading.AsyncHelper.UnwrapTask(System.Type)">
+            <summary>
+            Returns void if given type is Task.
+            Return T, if given type is Task{T}.
+            Returns given type otherwise.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Threading.AsyncHelper.RunSync``1(System.Func{System.Threading.Tasks.Task{``0}})">
+            <summary>
+            Runs a async method synchronously.
+            </summary>
+            <param name="func">A function that returns a result</param>
+            <typeparam name="TResult">Result type</typeparam>
+            <returns>Result of the async operation</returns>
+        </member>
+        <member name="M:Volo.Abp.Threading.AsyncHelper.RunSync(System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            Runs a async method synchronously.
+            </summary>
+            <param name="action">An async action</param>
+        </member>
+        <member name="T:Volo.Abp.Threading.AsyncOneTimeRunner">
+            <summary>
+            This class is used to ensure running of a code block only once.
+            It can be instantiated as a static object to ensure that the code block runs only once in the application lifetime.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.Threading.LockExtensions">
+            <summary>
+            Extension methods to make locking easier.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Threading.LockExtensions.Locking(System.Object,System.Action)">
+            <summary>
+            Executes given <paramref name="action"/> by locking given <paramref name="source"/> object.
+            </summary>
+            <param name="source">Source object (to be locked)</param>
+            <param name="action">Action (to be executed)</param>
+        </member>
+        <member name="M:Volo.Abp.Threading.LockExtensions.Locking``1(``0,System.Action{``0})">
+            <summary>
+            Executes given <paramref name="action"/> by locking given <paramref name="source"/> object.
+            </summary>
+            <typeparam name="T">Type of the object (to be locked)</typeparam>
+            <param name="source">Source object (to be locked)</param>
+            <param name="action">Action (to be executed)</param>
+        </member>
+        <member name="M:Volo.Abp.Threading.LockExtensions.Locking``1(System.Object,System.Func{``0})">
+            <summary>
+            Executes given <paramref name="func"/> and returns it's value by locking given <paramref name="source"/> object.
+            </summary>
+            <typeparam name="TResult">Return type</typeparam>
+            <param name="source">Source object (to be locked)</param>
+            <param name="func">Function (to be executed)</param>
+            <returns>Return value of the <paramref name="func"/></returns>
+        </member>
+        <member name="M:Volo.Abp.Threading.LockExtensions.Locking``2(``0,System.Func{``0,``1})">
+            <summary>
+            Executes given <paramref name="func"/> and returns it's value by locking given <paramref name="source"/> object.
+            </summary>
+            <typeparam name="T">Type of the object (to be locked)</typeparam>
+            <typeparam name="TResult">Return type</typeparam>
+            <param name="source">Source object (to be locked)</param>
+            <param name="func">Function (to be executed)</param>
+            <returns>Return value of the <paramnref name="func"/></returns>
+        </member>
+        <member name="T:Volo.Abp.Threading.OneTimeRunner">
+            <summary>
+            This class is used to ensure running of a code block only once.
+            It can be instantiated as a static object to ensure that the code block runs only once in the application lifetime.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.UserFriendlyException">
+            <summary>
+            This exception type is directly shown to the user.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.UserFriendlyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor for serializing.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Validation.DynamicRangeAttribute.#ctor(System.Type,System.Type,System.String,System.String)">
+            <param name="sourceType">A type to get the values of the properties</param>
+            <param name="operandType">The type of the range parameters. Must implement IComparable. <see cref="P:System.ComponentModel.DataAnnotations.RangeAttribute.OperandType"/></param>
+            <param name="minimumPropertyName">The name of the public static property for the <see cref="P:System.ComponentModel.DataAnnotations.RangeAttribute.Minimum"/></param>
+            <param name="maximumPropertyName">The name of the public static property for the <see cref="P:System.ComponentModel.DataAnnotations.RangeAttribute.Maximum"/></param>
+        </member>
+        <member name="T:Volo.Abp.Validation.DynamicStringLengthAttribute">
+            <summary>
+            Used to determine <see cref="P:System.ComponentModel.DataAnnotations.StringLengthAttribute.MaximumLength"/> and <see cref="P:System.ComponentModel.DataAnnotations.StringLengthAttribute.MinimumLength"/>
+            properties on the runtime. 
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Validation.DynamicStringLengthAttribute.#ctor(System.Type,System.String,System.String)">
+            <param name="sourceType">A type to get the values of the properties</param>
+            <param name="maximumLengthPropertyName">The name of the public static property for the <see cref="P:System.ComponentModel.DataAnnotations.StringLengthAttribute.MaximumLength"/></param>
+            <param name="minimumLengthPropertyName">The name of the public static property for the <see cref="P:System.ComponentModel.DataAnnotations.StringLengthAttribute.MinimumLength"/></param>
+        </member>
+    </members>
+</doc>

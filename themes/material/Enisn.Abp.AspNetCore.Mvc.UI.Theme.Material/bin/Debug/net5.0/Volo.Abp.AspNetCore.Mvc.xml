@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.AspNetCore.Mvc</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.AspNetCore.Builder.AbpAspNetCoreMvcApplicationBuilderExtensions.UseMvcWithDefaultRouteAndArea(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Action{Microsoft.AspNetCore.Routing.IEndpointRouteBuilder})">
+             <summary>
+             Adds MVC to the <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder" /> request execution pipeline
+             with the following default routes:
+            
+             - a default route named 'defaultWithArea' and the following template: '{area}/{controller=Home}/{action=Index}/{id?}'.
+             - a default route named 'default' and the following template: '{controller=Home}/{action=Index}/{id?}'.
+             </summary>
+             <param name="app">The <see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder" />.</param>
+            <param name="additionalConfigurationAction">Additional action to configure routes</param>
+            <returns>A reference to this instance after the operation has completed.</returns>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAntiForgeryOptions.TokenCookie">
+            <summary>
+            Use to set the cookie options to transfer Anti Forgery token between server and client.
+            Default name of the cookie: "XSRF-TOKEN".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAntiForgeryOptions.AuthCookieSchemaName">
+            <summary>
+            Used to find auth cookie when validating Anti Forgery token.
+            Default value: "Identity.Application".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAntiForgeryOptions.AutoValidate">
+            <summary>
+            Default value: true.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAntiForgeryOptions.AutoValidateFilter">
+            <summary>
+            A predicate to filter types to auto-validate.
+            Return true to select the type to validate.
+            Default: returns true for all given types.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAntiForgeryOptions.AutoValidateIgnoredHttpMethods">
+            <summary>
+            Default methods: "GET", "HEAD", "TRACE", "OPTIONS".
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAutoValidateAntiforgeryTokenAttribute.Order">
+            <summary>
+            Gets the order value for determining the order of execution of filters. Filters execute in
+            ascending numeric value of the <see cref="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAutoValidateAntiforgeryTokenAttribute.Order"/> property.
+            </summary>
+            <remarks>
+            <para>
+            Filters are executed in a sequence determined by an ascending sort of the <see cref="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAutoValidateAntiforgeryTokenAttribute.Order"/> property.
+            </para>
+            <para>
+            The default Order for this attribute is 1000 because it must run after any filter which does authentication
+            or login in order to allow them to behave as expected (ie Unauthenticated or Redirect instead of 400).
+            </para>
+            <para>
+            Look at <see cref="P:Microsoft.AspNetCore.Mvc.Filters.IOrderedFilter.Order"/> for more detailed info.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAutoValidateAntiforgeryTokenAttribute.IsReusable">
+            <inheritdoc />
+        </member>
+        <member name="M:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpAutoValidateAntiforgeryTokenAttribute.CreateInstance(System.IServiceProvider)">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpValidateAntiForgeryTokenAttribute.Order">
+            <summary>
+            Gets the order value for determining the order of execution of filters. Filters execute in
+            ascending numeric value of the <see cref="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpValidateAntiForgeryTokenAttribute.Order"/> property.
+            </summary>
+            <remarks>
+            <para>
+            Filters are executed in an ordering determined by an ascending sort of the <see cref="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpValidateAntiForgeryTokenAttribute.Order"/> property.
+            </para>
+            <para>
+            The default Order for this attribute is 1000 because it must run after any filter which does authentication 
+            or login in order to allow them to behave as expected (ie Unauthenticated or Redirect instead of 400).
+            </para>
+            <para>
+            Look at <see cref="P:Microsoft.AspNetCore.Mvc.Filters.IOrderedFilter.Order"/> for more detailed info.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpValidateAntiForgeryTokenAttribute.IsReusable">
+            <inheritdoc />
+        </member>
+        <member name="M:Volo.Abp.AspNetCore.Mvc.AntiForgery.AbpValidateAntiForgeryTokenAttribute.CreateInstance(System.IServiceProvider)">
+            <inheritdoc />
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.ApiExploring.AbpRemoteServiceApiDescriptionProvider.Order">
+            <summary>
+            The order -999 ensures that this provider is executed right after the
+            Microsoft.AspNetCore.Mvc.ApiExplorer.DefaultApiDescriptionProvider.
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.AspNetCore.Mvc.ApplicationPartSorter">
+            <summary>
+            This class is used to align order of the MVC Application Parts with the order of
+            ABP module dependencies.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.Conventions.AbpConventionalControllerOptions.UseV3UrlStyle">
+            <summary>
+            Set true to use the old style URL path style.
+            Default: false.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.AspNetCore.Mvc.Conventions.ConventionalControllerSetting.UseV3UrlStyle">
+            <summary>
+            Set true to use the old style URL path style.
+            Default: null (uses the value of the <see cref="P:Volo.Abp.AspNetCore.Mvc.Conventions.AbpConventionalControllerOptions.UseV3UrlStyle"/>).
+            </summary>
+        </member>
+        <member name="T:Volo.Abp.AspNetCore.Mvc.Json.MediaTypeHeaderValues">
+            <summary>
+            https://github.com/dotnet/aspnetcore/blob/master/src/Mvc/Mvc.NewtonsoftJson/src/MediaTypeHeaderValues.cs
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.AspNetCore.Mvc.ModelBinding.ExtraPropertyBindingHelper.ExtractExtraPropertyName(System.String)">
+            <summary>
+            <paramref name="expression"/> is a string like "UserInfo.ExtraProperties[SocialSecurityNumber]"
+            This method returns "SocialSecurityNumber" for this example. */
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.AspNetCore.Mvc.ModelBinding.ExtraPropertyBindingHelper.ExtractContainerName(System.String)">
+            <summary>
+            <paramref name="expression"/> is a string like "UserInfo.ExtraProperties[SocialSecurityNumber]"
+            This method returns "UserInfo" for this example.
+            </summary>
+        </member>
+    </members>
+</doc>

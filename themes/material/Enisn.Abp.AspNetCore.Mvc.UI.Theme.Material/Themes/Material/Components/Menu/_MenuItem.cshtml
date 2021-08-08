@@ -1,0 +1,49 @@
+﻿@using Volo.Abp.UI.Navigation
+@model ApplicationMenuItem
+@{
+    var elementId = string.IsNullOrEmpty(Model.ElementId) ? string.Empty : $"id=\"{Model.ElementId}\"";
+    var cssClass = string.IsNullOrEmpty(Model.CssClass) ? string.Empty : Model.CssClass;
+    var disabled = Model.IsDisabled ? "disabled" : string.Empty;
+    var url = string.IsNullOrEmpty(Model.Url) ? "#" : Url.Content(Model.Url);
+}
+@if (Model.IsLeaf)
+{
+    if (Model.Url != null)
+    {
+        <a href="@url" class="list-group-item list-group-item-action py-2 ripple ripple-surface @cssClass @disabled" @elementId aria-current="true" target="@Model.Target">
+               
+            @if (Model.Icon != null)
+            {
+                if (Model.Icon.StartsWith("fa"))
+                {
+                    <i class="@Model.Icon me-3"></i>
+                }
+            }
+
+            <span>@Model.DisplayName</span>
+        </a>
+    }
+}
+else
+{
+    <div class="list-group-item list-group-item-action py-2 ripple ripple-surface">
+        <div class="dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="Menu_@(Model.Name)"  data-mdb-toggle="collapse" href="#@(Model.ElementId)" role="button" aria-expanded="false" data-mdb-target=".multi-collapse">
+                @if (Model.Icon != null)
+                {
+                    if (Model.Icon.StartsWith("fa"))
+                    {
+                        <i class="@Model.Icon"></i>
+                    }
+                }
+                @Model.DisplayName
+            </a>
+            <div class="border-0 shadow-sm">
+                @foreach (var childMenuItem in Model.Items)
+                {
+                    @await Html.PartialAsync("~/Themes/Material/Components/Menu/_MenuItem.cshtml", childMenuItem)
+                }
+            </div>
+        </div>
+    </div>
+}

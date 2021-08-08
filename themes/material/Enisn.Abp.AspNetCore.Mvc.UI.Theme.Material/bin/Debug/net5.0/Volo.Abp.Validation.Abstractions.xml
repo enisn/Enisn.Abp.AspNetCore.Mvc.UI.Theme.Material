@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Validation.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Volo.Abp.Validation.AbpValidationException">
+            <summary>
+            This exception type is used to throws validation exceptions.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Validation.AbpValidationException.ValidationErrors">
+            <summary>
+            Detailed list of validation errors for this exception.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Validation.AbpValidationException.LogLevel">
+            <summary>
+            Exception severity.
+            Default: Warn.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Validation.AbpValidationException.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Validation.AbpValidationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor for serializing.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Validation.AbpValidationException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="M:Volo.Abp.Validation.AbpValidationException.#ctor(System.Collections.Generic.IList{System.ComponentModel.DataAnnotations.ValidationResult})">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="validationErrors">Validation errors</param>
+        </member>
+        <member name="M:Volo.Abp.Validation.AbpValidationException.#ctor(System.String,System.Collections.Generic.IList{System.ComponentModel.DataAnnotations.ValidationResult})">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="validationErrors">Validation errors</param>
+        </member>
+        <member name="M:Volo.Abp.Validation.AbpValidationException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="innerException">Inner exception</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Volo.Abp.Settings</name>
+    </assembly>
+    <members>
+        <member name="P:Volo.Abp.Settings.SettingDefinition.Name">
+            <summary>
+            Unique name of the setting.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Settings.SettingDefinition.DefaultValue">
+            <summary>
+            Default value of the setting.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Settings.SettingDefinition.IsVisibleToClients">
+            <summary>
+            Can clients see this setting and it's value.
+            It maybe dangerous for some settings to be visible to clients (such as an email server password).
+            Default: false.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Settings.SettingDefinition.Providers">
+            <summary>
+            A list of allowed providers to get/set value of this setting.
+            An empty list indicates that all providers are allowed.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Settings.SettingDefinition.IsInherited">
+            <summary>
+            Is this setting inherited from parent scopes.
+            Default: True.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Settings.SettingDefinition.Properties">
+            <summary>
+            Can be used to get/set custom properties for this setting definition.
+            </summary>
+        </member>
+        <member name="P:Volo.Abp.Settings.SettingDefinition.IsEncrypted">
+            <summary>
+            Is this setting stored as encrypted in the data source.
+            Default: False.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Settings.SettingDefinition.WithProperty(System.String,System.Object)">
+            <summary>
+            Sets a property in the <see cref="P:Volo.Abp.Settings.SettingDefinition.Properties"/> dictionary.
+            This is a shortcut for nested calls on this object.
+            </summary>
+        </member>
+        <member name="M:Volo.Abp.Settings.SettingDefinition.WithProviders(System.String[])">
+            <summary>
+            Sets a property in the <see cref="P:Volo.Abp.Settings.SettingDefinition.Properties"/> dictionary.
+            This is a shortcut for nested calls on this object.
+            </summary>
+        </member>
+    </members>
+</doc>
