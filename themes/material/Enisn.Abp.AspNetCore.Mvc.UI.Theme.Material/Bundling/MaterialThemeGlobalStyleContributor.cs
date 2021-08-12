@@ -2,7 +2,7 @@
 
 namespace Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material.Bundling
 {
-    public class MaterialThemeGlobalStyleContributor : BundleContributor
+	public class MaterialThemeGlobalStyleContributor : BundleContributor
     {
         public override void ConfigureBundle(BundleConfigurationContext context)
         {
