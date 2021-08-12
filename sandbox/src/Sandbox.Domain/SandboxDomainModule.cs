@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using Sandbox.MultiTenancy;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
+using Volo.Abp.BlobStoring.Database;
 using Volo.Abp.Emailing;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -31,6 +32,7 @@ namespace Sandbox
         typeof(AbpEmailingModule)
     )]
     [DependsOn(typeof(CmsKitDomainModule))]
+    [DependsOn(typeof(BlobStoringDatabaseDomainModule))]
     public class SandboxDomainModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

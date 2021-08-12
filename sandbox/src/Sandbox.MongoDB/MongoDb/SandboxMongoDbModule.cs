@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AuditLogging.MongoDB;
 using Volo.Abp.BackgroundJobs.MongoDB;
+using Volo.Abp.BlobStoring.Database.MongoDB;
 using Volo.Abp.FeatureManagement.MongoDB;
 using Volo.Abp.Identity.MongoDB;
 using Volo.Abp.IdentityServer.MongoDB;
@@ -25,6 +26,7 @@ namespace Sandbox.MongoDB
         typeof(AbpFeatureManagementMongoDbModule)
         )]
     [DependsOn(typeof(CmsKitMongoDbModule))]
+    [DependsOn(typeof(BlobStoringDatabaseMongoDbModule))]
     public class SandboxMongoDbModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

@@ -1,6 +1,7 @@
 using Sandbox.Localization;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
+using Volo.Abp.BlobStoring.Database;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.IdentityServer;
@@ -27,6 +28,7 @@ namespace Sandbox
         typeof(AbpTenantManagementDomainSharedModule)
         )]
     [DependsOn(typeof(CmsKitDomainSharedModule))]
+    [DependsOn(typeof(BlobStoringDatabaseDomainSharedModule))]
     public class SandboxDomainSharedModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
