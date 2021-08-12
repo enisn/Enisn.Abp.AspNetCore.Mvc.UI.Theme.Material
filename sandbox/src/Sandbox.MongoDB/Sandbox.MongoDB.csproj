@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Volo.CmsKit.MongoDB" Version="4.4.0" />
     <ProjectReference Include="..\Sandbox.Domain\Sandbox.Domain.csproj" />
     <PackageReference Include="Volo.Abp.PermissionManagement.MongoDB" Version="4.4.0" />
     <PackageReference Include="Volo.Abp.SettingManagement.MongoDB" Version="4.4.0" />

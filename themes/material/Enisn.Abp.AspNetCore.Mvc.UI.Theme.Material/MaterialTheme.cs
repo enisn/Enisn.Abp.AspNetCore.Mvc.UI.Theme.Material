@@ -16,6 +16,8 @@ namespace Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material
                     return "~/Themes/Material/Layouts/Application.cshtml";
                 case StandardLayouts.Account:
                     return "~/Themes/Material/Layouts/Account.cshtml";
+                case StandardLayouts.Public:
+                    return "~/Themes/Material/Layouts/Public.cshtml";
                 case StandardLayouts.Empty:
                     return "~/Themes/Material/Layouts/Empty.cshtml";
                 default:

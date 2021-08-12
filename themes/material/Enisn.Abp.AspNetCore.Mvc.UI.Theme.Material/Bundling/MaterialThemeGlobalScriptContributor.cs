@@ -7,7 +7,7 @@ namespace Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material.Bundling
         public override void ConfigureBundle(BundleConfigurationContext context)
         {
             context.Files.Add("/themes/material/js/mdb.min.js");
-            context.Files.Add("/themes/material/js/admin.js");
+            context.Files.Add("/themes/material/js/fix.js");
         }
     }
 }

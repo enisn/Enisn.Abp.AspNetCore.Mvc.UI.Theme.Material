@@ -1,4 +1,5 @@
-﻿using Volo.Abp.Threading;
+﻿using Volo.Abp.GlobalFeatures;
+using Volo.Abp.Threading;
 
 namespace Sandbox
 {
@@ -10,6 +11,12 @@ namespace Sandbox
         {
             OneTimeRunner.Run(() =>
             {
+                GlobalFeatureManager.Instance.Modules.CmsKit(cmsKit =>
+                {
+                    cmsKit.EnableAll();
+                    cmsKit.Menu.Disable();
+                });
+
                 /* You can configure (enable/disable) global features of the used modules here.
                  *
                  * YOU CAN SAFELY DELETE THIS CLASS AND REMOVE ITS USAGES IF YOU DON'T NEED TO IT!

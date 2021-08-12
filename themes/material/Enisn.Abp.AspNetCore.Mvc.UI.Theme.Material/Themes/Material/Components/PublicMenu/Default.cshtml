@@ -1,0 +1,7 @@
+﻿@using Volo.Abp.UI.Navigation
+@model ApplicationMenu
+
+@foreach (var menuItem in Model.Items)
+{
+    @await Html.PartialAsync("~/Themes/Material/Components/PublicMenu/_MenuItem.cshtml", menuItem)
+}

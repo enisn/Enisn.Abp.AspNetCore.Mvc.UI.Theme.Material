@@ -18,6 +18,7 @@ using Volo.Abp.AspNetCore.Authentication.JwtBearer;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
+using Volo.Abp.AspNetCore.Mvc.UI.Components.LayoutHook;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
@@ -31,6 +32,7 @@ using Volo.Abp.TenantManagement.Web;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
+using Volo.CmsKit.Web;
 
 namespace Sandbox.Web
 {
@@ -48,6 +50,7 @@ namespace Sandbox.Web
         typeof(AbpAspNetCoreSerilogModule),
         typeof(AbpSwashbuckleModule)
         )]
+    [DependsOn(typeof(CmsKitWebModule))]
     public class SandboxWebModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
@@ -133,7 +136,7 @@ namespace Sandbox.Web
                     options.FileSets.ReplaceEmbeddedByPhysical<SandboxApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Sandbox.Application.Contracts"));
                     options.FileSets.ReplaceEmbeddedByPhysical<SandboxApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Sandbox.Application"));
                     options.FileSets.ReplaceEmbeddedByPhysical<SandboxWebModule>(hostingEnvironment.ContentRootPath);
-                });
+               });
             }
         }
 

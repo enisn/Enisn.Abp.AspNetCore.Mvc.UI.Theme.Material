@@ -54,12 +54,13 @@
 <body class="abp-empty-layout @rtl">
     @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Empty)
 
-    <div class="@containerClass">
-        @(await Component.InvokeAsync<PageAlertsViewComponent>())
-        @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.First, StandardLayouts.Empty)
-        @RenderBody()
-        @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.Last, StandardLayouts.Empty)
-    </div>
+<div class="@containerClass">
+    <h1>Container Header</h1>
+    @(await Component.InvokeAsync<PageAlertsViewComponent>())
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.First, StandardLayouts.Empty)
+    @RenderBody()
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.Last, StandardLayouts.Empty)
+</div>
 
     <abp-script-bundle name="@MaterialThemeBundles.Scripts.Global" />
 
