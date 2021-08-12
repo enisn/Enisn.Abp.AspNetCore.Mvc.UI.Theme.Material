@@ -34,18 +34,30 @@
 else
 {
     <div>
-        @if (Model.Icon != null)
-        {
-            if (Model.Icon.StartsWith("fa"))
+    
+        @{
+            var showClass = String.Empty;
+            var menuId = "Menu_"+ Model.Name.Replace(".", "-");
+
+            if (PageLayout.Content.MenuItemName != null && PageLayout.Content.MenuItemName.StartsWith(Model.Name))
             {
-                <i class="@Model.Icon"></i>
+                showClass = "show";
             }
         }
-        <span>
-            @Model.DisplayName
-        </span>
-        
-        <div class="border-0 p-1"  id="Menu_@(Model.Name)" >
+        <a href="#@menuId" class="border-0 list-group-item list-group-item-action py-2 ripple ripple-surface" data-mdb-toggle="collapse">
+            @if (Model.Icon != null)
+            {
+                if (Model.Icon.StartsWith("fa"))
+                {
+                    <i class="@Model.Icon"></i>
+                }
+            }
+            <span>
+                @Model.DisplayName
+            </span>
+        </a>
+
+        <div class="border-0 p-0 ml-2 collapse @showClass" id="@menuId">
             @foreach (var childMenuItem in Model.Items)
             {
                 @await Html.PartialAsync("~/Themes/Material/Components/Menu/_MenuItem.cshtml", childMenuItem)
