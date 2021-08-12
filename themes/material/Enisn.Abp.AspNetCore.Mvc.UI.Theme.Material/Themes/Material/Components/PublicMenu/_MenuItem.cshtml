@@ -3,66 +3,58 @@
 @inject IPageLayout PageLayout
 @model ApplicationMenuItem
 @{
-    var elementId = string.IsNullOrEmpty(Model.ElementId) ? string.Empty : $"id=\"{Model.ElementId}\"";
-    var cssClass = string.IsNullOrEmpty(Model.CssClass) ? string.Empty : Model.CssClass;
-    var disabled = Model.IsDisabled ? "disabled" : string.Empty;
-    var url = string.IsNullOrEmpty(Model.Url) ? "#" : Url.Content(Model.Url);
+	var elementId = string.IsNullOrEmpty(Model.ElementId) ? string.Empty : $"id=\"{Model.ElementId}\"";
+	var cssClass = string.IsNullOrEmpty(Model.CssClass) ? string.Empty : Model.CssClass;
+	var disabled = Model.IsDisabled ? "disabled" : string.Empty;
+	var url = string.IsNullOrEmpty(Model.Url) ? "#" : Url.Content(Model.Url);
 }
 
 @if (Model.IsLeaf)
 {
-    if (Model.Url != null)
-    {
-        if (Model.Name == PageLayout.Content.MenuItemName)
-        {
-            cssClass += " active";
-        }
+	if (Model.Url != null)
+	{
+		if (Model.Name == PageLayout.Content.MenuItemName)
+		{
+			cssClass += " active";
+		}
+		<li class="nav-item">
+			<a href="@url" class="border-0 list-group-item list-group-item-action py-2 ripple ripple-surface @cssClass @disabled" @elementId target="@Model.Target">
 
-        <a href="@url" class="border-0 list-group-item list-group-item-action py-2 ripple ripple-surface @cssClass @disabled" @elementId aria-current="true" target="@Model.Target">
+				@if (Model.Icon != null)
+				{
+					if (Model.Icon.StartsWith("fa"))
+					{
+						<i class="@Model.Icon me-3"></i>
+					}
+				}
 
-            @if (Model.Icon != null)
-            {
-                if (Model.Icon.StartsWith("fa"))
-                {
-                    <i class="@Model.Icon me-3"></i>
-                }
-            }
-
-            <span>@Model.DisplayName</span>
-        </a>
-    }
+				<span>@Model.DisplayName</span>
+			</a>
+		</li>
+	}
 }
 else
 {
-    <div>
-    
-        @{
-            var showClass = String.Empty;
-            var menuId = "Menu_"+ Model.Name.Replace(".", "-");
+	var menuId = "Menu" + Model.Name.Replace(".", string.Empty);
 
-            if (PageLayout.Content.MenuItemName != null && PageLayout.Content.MenuItemName.StartsWith(Model.Name))
-            {
-                showClass = "show";
-            }
-        }
-        <a href="#@menuId" class="border-0 list-group-item list-group-item-action py-2 ripple ripple-surface" data-mdb-toggle="collapse">
-            @if (Model.Icon != null)
-            {
-                if (Model.Icon.StartsWith("fa"))
-                {
-                    <i class="@Model.Icon"></i>
-                }
-            }
-            <span>
-                @Model.DisplayName
-            </span>
-        </a>
-
-        <div class="border-0 p-0 ml-2 collapse @showClass" id="@menuId">
-            @foreach (var childMenuItem in Model.Items)
-            {
-                @await Html.PartialAsync("~/Themes/Material/Components/PublicMenu/_MenuItem.cshtml", childMenuItem)
-            }
-        </div>
-    </div>
+	<li class="nav-item dropdown sub-menu">
+		<a href="#" class="nav-link dropdown-toggle" id="@menuId" data-mdb-toggle="dropdown" aria-expanded="false">
+			@if (Model.Icon != null)
+			{
+				if (Model.Icon.StartsWith("fa"))
+				{
+					<i class="@Model.Icon"></i>
+				}
+			}
+			<span>
+				@Model.DisplayName
+			</span>
+		</a>
+		<ul class="dropdown-menu" aria-labelledby="@menuId">
+			@foreach (var childMenuItem in Model.Items)
+			{
+				@await Html.PartialAsync("~/Themes/Material/Components/PublicMenu/_MenuItem.cshtml", childMenuItem)
+			}
+		</ul>
+	</li>
 }

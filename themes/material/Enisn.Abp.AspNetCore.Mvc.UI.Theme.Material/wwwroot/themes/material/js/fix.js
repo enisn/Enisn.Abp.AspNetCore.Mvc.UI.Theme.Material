@@ -6,3 +6,10 @@ $(window).on('shown.bs.modal', function() {
     $(".modal").modal('hide');
   });
 });
+
+$(".sub-menu").mouseover(function () {
+    $(this).find('.dropdown-menu').first().addClass('show')
+})
+$(".sub-menu").mouseout(function () {
+    $(this).find('.dropdown-menu').first().removeClass('show')
+})
