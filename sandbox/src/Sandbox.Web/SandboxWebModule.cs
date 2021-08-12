@@ -154,8 +154,8 @@ namespace Sandbox.Web
                 options.Languages.Add(new LanguageInfo("ru", "ru", "Русский", "ru"));
                 options.Languages.Add(new LanguageInfo("sk", "sk", "Slovak", "sk"));
                 options.Languages.Add(new LanguageInfo("tr", "tr", "Türkçe", "tr"));
-                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文", "ch"));
-                options.Languages.Add(new LanguageInfo("zh-Hant", "zh-Hant", "繁體中文", "ch"));
+                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文", "cn"));
+                options.Languages.Add(new LanguageInfo("zh-Hant", "zh-Hant", "繁體中文", "cn"));
                 options.Languages.Add(new LanguageInfo("de-DE", "de-DE", "Deutsch", "de"));
                 options.Languages.Add(new LanguageInfo("es", "es", "Español", "es"));
             });
