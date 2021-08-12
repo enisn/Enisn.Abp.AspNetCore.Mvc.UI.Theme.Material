@@ -17,7 +17,7 @@
             cssClass += " active";
         }
 
-        <a href="@url" class="list-group-item list-group-item-action py-2 ripple ripple-surface @cssClass @disabled" @elementId aria-current="true" target="@Model.Target">
+        <a href="@url" class="border-0 list-group-item list-group-item-action py-2 ripple ripple-surface @cssClass @disabled" @elementId aria-current="true" target="@Model.Target">
 
             @if (Model.Icon != null)
             {
@@ -33,7 +33,7 @@
 }
 else
 {
-    <div class="list-group-item list-group-item-action py-2 ripple ripple-surface">
+    <div>
         @if (Model.Icon != null)
         {
             if (Model.Icon.StartsWith("fa"))
