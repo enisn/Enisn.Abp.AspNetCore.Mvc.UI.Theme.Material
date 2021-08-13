@@ -29,10 +29,10 @@ namespace Sandbox
         typeof(AbpPermissionManagementDomainIdentityServerModule),
         typeof(AbpSettingManagementDomainModule),
         typeof(AbpTenantManagementDomainModule),
-        typeof(AbpEmailingModule)
+        typeof(AbpEmailingModule),
+        typeof(BlobStoringDatabaseDomainModule)
     )]
     [DependsOn(typeof(CmsKitDomainModule))]
-    [DependsOn(typeof(BlobStoringDatabaseDomainModule))]
     public class SandboxDomainModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)

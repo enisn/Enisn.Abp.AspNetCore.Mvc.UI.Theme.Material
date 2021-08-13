@@ -30,7 +30,7 @@
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Autofac" Version="4.4.0" />
     <ProjectReference Include="..\Sandbox.Application.Contracts\Sandbox.Application.Contracts.csproj" />
-    <ProjectReference Include="..\Sandbox.MongoDB\Sandbox.MongoDB.csproj" />
+    <ProjectReference Include="..\Sandbox.EntityFrameworkCore\Sandbox.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
   <ItemGroup>

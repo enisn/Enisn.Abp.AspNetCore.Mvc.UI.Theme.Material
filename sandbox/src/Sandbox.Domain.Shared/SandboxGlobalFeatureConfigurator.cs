@@ -14,7 +14,6 @@ namespace Sandbox
                 GlobalFeatureManager.Instance.Modules.CmsKit(cmsKit =>
                 {
                     cmsKit.EnableAll();
-                    cmsKit.Menu.Disable();
                 });
 
                 /* You can configure (enable/disable) global features of the used modules here.

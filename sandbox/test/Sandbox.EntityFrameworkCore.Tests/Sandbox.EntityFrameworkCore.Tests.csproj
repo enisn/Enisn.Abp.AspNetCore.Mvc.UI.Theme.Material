@@ -8,13 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Sandbox.MongoDB\Sandbox.MongoDB.csproj" />
+    <ProjectReference Include="..\..\src\Sandbox.EntityFrameworkCore\Sandbox.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\Sandbox.TestBase\Sandbox.TestBase.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="4.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
-    <PackageReference Include="Mongo2Go" Version="3.1.1" />
   </ItemGroup>
 
 </Project>

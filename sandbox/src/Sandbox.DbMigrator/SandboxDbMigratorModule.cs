@@ -1,4 +1,4 @@
-using Sandbox.MongoDB;
+﻿using Sandbox.EntityFrameworkCore;
 using Volo.Abp.Autofac;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.Modularity;
@@ -7,7 +7,7 @@ namespace Sandbox.DbMigrator
 {
     [DependsOn(
         typeof(AbpAutofacModule),
-        typeof(SandboxMongoDbModule),
+        typeof(SandboxEntityFrameworkCoreModule),
         typeof(SandboxApplicationContractsModule)
         )]
     public class SandboxDbMigratorModule : AbpModule
