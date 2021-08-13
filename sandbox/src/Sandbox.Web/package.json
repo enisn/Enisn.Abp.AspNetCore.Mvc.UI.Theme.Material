@@ -4,6 +4,6 @@
   "private": true,
   "dependencies": {
     "@abp/aspnetcore.mvc.ui.theme.basic": "^4.4.0-rc.2",
-    "@abp/cms-kit": "^4.4.0-rc.2"
+    "@abp/cms-kit": "4.4.0-rc.2"
   }
 }

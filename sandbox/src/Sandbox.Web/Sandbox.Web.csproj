@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <Import Project="..\..\common.props" />
 
@@ -13,6 +13,8 @@
     <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
     <PreserveCompilationReferences>true</PreserveCompilationReferences>
     <UserSecretsId>Sandbox-4681b4fd-151f-4221-84a4-929d86723e4c</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
@@ -32,20 +34,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.4.0" />
     <PackageReference Include="Volo.CmsKit.Web" Version="4.4.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\themes\material\Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material\Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material.csproj" />
     <ProjectReference Include="..\Sandbox.Application\Sandbox.Application.csproj" />
     <ProjectReference Include="..\Sandbox.HttpApi\Sandbox.HttpApi.csproj" />
-    <ProjectReference Include="..\Sandbox.MongoDB\Sandbox.MongoDB.csproj" />
-    <ProjectReference Include="..\..\..\themes\material\Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material\Enisn.Abp.AspNetCore.Mvc.UI.Theme.Material.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="4.4.0" />
+    <ProjectReference Include="..\Sandbox.EntityFrameworkCore\Sandbox.EntityFrameworkCore.csproj" />
     <PackageReference Include="Volo.Abp.Autofac" Version="4.4.0" />
     <PackageReference Include="Volo.Abp.Swashbuckle" Version="4.4.0" />
     <PackageReference Include="Volo.Abp.AspNetCore.Authentication.JwtBearer" Version="4.4.0" />

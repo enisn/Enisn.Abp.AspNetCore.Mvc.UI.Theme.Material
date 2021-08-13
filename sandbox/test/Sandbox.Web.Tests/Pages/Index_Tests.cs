@@ -4,7 +4,6 @@ using Xunit;
 
 namespace Sandbox.Pages
 {
-    [Collection(SandboxTestConsts.CollectionDefinitionName)]
     public class Index_Tests : SandboxWebTestBase
     {
         [Fact]

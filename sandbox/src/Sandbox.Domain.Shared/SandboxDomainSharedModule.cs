@@ -25,10 +25,10 @@ namespace Sandbox
         typeof(AbpIdentityServerDomainSharedModule),
         typeof(AbpPermissionManagementDomainSharedModule),
         typeof(AbpSettingManagementDomainSharedModule),
-        typeof(AbpTenantManagementDomainSharedModule)
+        typeof(AbpTenantManagementDomainSharedModule),
+        typeof(BlobStoringDatabaseDomainSharedModule)
         )]
     [DependsOn(typeof(CmsKitDomainSharedModule))]
-    [DependsOn(typeof(BlobStoringDatabaseDomainSharedModule))]
     public class SandboxDomainSharedModule : AbpModule
     {
         public override void PreConfigureServices(ServiceConfigurationContext context)
