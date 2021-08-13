@@ -144,7 +144,7 @@ namespace Sandbox.Web
         {
             Configure<AbpLocalizationOptions>(options =>
             {
-                options.Languages.Add(new LanguageInfo("ar", "ar", "العربية", "ar"));
+                options.Languages.Add(new LanguageInfo("ar", "ar", "العربية", "ae"));
                 options.Languages.Add(new LanguageInfo("cs", "cs", "Čeština", "cs"));
                 options.Languages.Add(new LanguageInfo("en", "en", "English", "us"));
                 options.Languages.Add(new LanguageInfo("en-GB", "en-GB", "English (UK)", "gb"));
