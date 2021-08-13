@@ -18,13 +18,13 @@
 			cssClass += " active";
 		}
 		<li class="nav-item">
-			<a href="@url" class="border-0 list-group-item list-group-item-action py-2 ripple ripple-surface @cssClass @disabled" @elementId target="@Model.Target">
+			<a href="@url" class="nav-link ripple ripple-surface @cssClass @disabled" @elementId target="@Model.Target">
 
 				@if (Model.Icon != null)
 				{
 					if (Model.Icon.StartsWith("fa"))
 					{
-						<i class="@Model.Icon me-3"></i>
+						<i class="@Model.Icon"></i>
 					}
 				}
 
@@ -35,7 +35,7 @@
 }
 else
 {
-	var menuId = "Menu" + Model.Name.Replace(".", string.Empty);
+	var menuId = "Menu_" + Model.Name.Replace(".", string.Empty);
 
 	<li class="nav-item dropdown sub-menu">
 		<a href="#" class="nav-link dropdown-toggle ripple ripple-surface" id="@menuId" data-mdb-toggle="dropdown" aria-expanded="false">

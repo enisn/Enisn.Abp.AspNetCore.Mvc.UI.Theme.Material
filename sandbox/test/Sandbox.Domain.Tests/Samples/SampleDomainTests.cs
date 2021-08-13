@@ -10,7 +10,6 @@ namespace Sandbox.Samples
      * (like IdentityUserManager here).
      * Only test your own domain services.
      */
-    [Collection(SandboxTestConsts.CollectionDefinitionName)]
     public class SampleDomainTests : SandboxDomainTestBase
     {
         private readonly IIdentityUserRepository _identityUserRepository;

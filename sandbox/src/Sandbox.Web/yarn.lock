@@ -57,7 +57,7 @@
     bootstrap "^4.6.0"
     bootstrap-v4-rtl "4.6.0-1"
 
-"@abp/cms-kit.admin@~4.4.0":
+"@abp/cms-kit.admin@~4.4.0-rc.2":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@abp/cms-kit.admin/-/cms-kit.admin-4.4.0.tgz#5ca81a6f6d08c74bdecf053a06e076e3976751dc"
   integrity sha512-0bz9bbzmAee5mZxJ+zcYWSu2n3k4NkN/tTfRoT6OBEljGxmh79AAA1PAc399tYNjo6vr1H2duCOGLMvXwCQtHQ==
@@ -67,7 +67,7 @@
     "@abp/tui-editor" "~4.4.0"
     "@abp/uppy" "~4.4.0"
 
-"@abp/cms-kit.public@~4.4.0":
+"@abp/cms-kit.public@~4.4.0-rc.2":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@abp/cms-kit.public/-/cms-kit.public-4.4.0.tgz#82fc6a52ba2fefefd46bcafafcb1feace29ebcdd"
   integrity sha512-HNNJHLLYMCFELGgus8016IdHn1b7k4tdpaPoCTq8JooIUaglv5/MBZcmKtwEGaPklyW+TwZPQssTy85IvNO3gg==
@@ -75,13 +75,13 @@
     "@abp/highlight.js" "~4.4.0"
     "@abp/star-rating-svg" "~4.4.0"
 
-"@abp/cms-kit@^4.4.0-rc.2":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@abp/cms-kit/-/cms-kit-4.4.0.tgz#69f515ac49c32b9ad051671f78970dd36b4d66d6"
-  integrity sha512-XaBH9CB+HNEOVQWQU6nK0qmhRsnO15t9dG+3l5zCFRBWIC21W1LTm1Xzoltr8GUnrkpcaAySmzFwR/xhqyH0Ag==
+"@abp/cms-kit@4.4.0-rc.2":
+  version "4.4.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@abp/cms-kit/-/cms-kit-4.4.0-rc.2.tgz#18a9705ffd3817e65ee7dc56016471108434c1e9"
+  integrity sha512-+4WBAU4hxhbeS0N1DWIbGJRghxuiyskVkCAJnbJugvPzTRSNBLoKIL20+aeQyCcv5PUPe6g3SufP3Ck51N6GUw==
   dependencies:
-    "@abp/cms-kit.admin" "~4.4.0"
-    "@abp/cms-kit.public" "~4.4.0"
+    "@abp/cms-kit.admin" "~4.4.0-rc.2"
+    "@abp/cms-kit.public" "~4.4.0-rc.2"
 
 "@abp/codemirror@~4.4.0":
   version "4.4.0"

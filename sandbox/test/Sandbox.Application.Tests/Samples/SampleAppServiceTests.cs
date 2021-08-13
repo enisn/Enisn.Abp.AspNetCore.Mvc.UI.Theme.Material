@@ -10,7 +10,6 @@ namespace Sandbox.Samples
      * (like IIdentityUserAppService here).
      * Only test your own application services.
      */
-    [Collection(SandboxTestConsts.CollectionDefinitionName)]
     public class SampleAppServiceTests : SandboxApplicationTestBase
     {
         private readonly IIdentityUserAppService _userAppService;

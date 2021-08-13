@@ -1,10 +1,10 @@
-using Sandbox.MongoDB;
+﻿using Sandbox.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 
 namespace Sandbox
 {
     [DependsOn(
-        typeof(SandboxMongoDbTestModule)
+        typeof(SandboxEntityFrameworkCoreTestModule)
         )]
     public class SandboxDomainTestModule : AbpModule
     {
