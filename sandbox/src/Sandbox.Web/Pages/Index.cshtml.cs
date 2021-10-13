@@ -6,5 +6,7 @@
         {
             
         }
+
+        public string Parameter { get; set; }
     }
 }
