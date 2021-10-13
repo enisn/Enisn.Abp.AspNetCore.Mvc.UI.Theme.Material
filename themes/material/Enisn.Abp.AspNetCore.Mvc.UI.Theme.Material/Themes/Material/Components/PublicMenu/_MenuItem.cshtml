@@ -50,7 +50,7 @@ else
 				@Model.DisplayName
 			</span>
 		</a>
-		<ul class="dropdown-menu" aria-labelledby="@menuId">
+		<ul class="dropdown-menu bg-theme" aria-labelledby="@menuId">
 			@foreach (var childMenuItem in Model.Items)
 			{
 				@await Html.PartialAsync("~/Themes/Material/Components/PublicMenu/_MenuItem.cshtml", childMenuItem)

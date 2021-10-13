@@ -59,17 +59,17 @@
 <header>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-theme fixed-top">
         <div class="container-fluid">
             <!-- Navbar brand -->
             <a class="navbar-brand" href="/">
                 @(await Component.InvokeAsync<MainNavbarBrandViewComponent>())
             </a>
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-                    aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#main-navbar"
+                    aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarExample01">
+            <div class="collapse navbar-collapse" id="main-navbar">
                 @(await Component.InvokeAsync<PublicNavbarMenuViewComponent>())
 
                 <ul class="navbar-nav d-flex flex-row">
